@@ -1,28 +1,32 @@
 @(form: Form[AuthController.LoginForm])
-<html>
+@main("Welcome to Play") {
+        <head>
+            <title>Jitensha</title>
+        </head>
 
-    <head>
-        <title>Jitensha</title>
-    </head>
-
-    <body>
+        <body>
         @helper.form(routes.AuthController.authenticate) {
-
-        <h1>Sign in</h1>
-
-        <p>
-            <input name="email" placeholder="Email" value="@form(" email ").value">
-        </p>
-
-        <p>
-            <input name="password" placeholder="Password">
-        </p>
-
-        <p>
-            <button>Login</button>
-        </p>
+                <div class="container d-flex align-items-center h-100">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3">
+                            <h1 class="text-center text-primary">JITENSHA</h1>
+                            <form>
+                                <div class="form-group">
+                                    <label for="inputEmail">Email address</label>
+                                    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email" value="@form(" email ").value">
+                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword">Password</label>
+                                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                                </div>
+                                <button type="submit" class="btn btn-primary align-middle">Login</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
         }
+        </body>
+}
 
-    </body>
 
-</html>
