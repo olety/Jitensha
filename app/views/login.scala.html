@@ -1,20 +1,28 @@
-@*
- * This template takes a single argument, a String containing a
- * message to display.
- *@
-@(message: String)
+@(form: Form[AuthController.LoginForm])
+<html>
 
-@*
- * Call the `main` template with two arguments. The first
- * argument is a `String` with the title of the page, the second
- * argument is an `Html` object containing the body of the page.
- *@
-@main("Welcome to Play") {
+    <head>
+        <title>Jitensha</title>
+    </head>
 
-    @*
-     * Get an `Html` object by calling the built-in Play welcome
-     * template and passing a `String` message.
-     *@
-    @welcome(message, style = "java")
+    <body>
+        @helper.form(routes.AuthController.authenticate) {
 
-}
+        <h1>Sign in</h1>
+
+        <p>
+            <input name="email" placeholder="Email" value="@form(" email ").value">
+        </p>
+
+        <p>
+            <input name="password" placeholder="Password">
+        </p>
+
+        <p>
+            <button>Login</button>
+        </p>
+        }
+
+    </body>
+
+</html>
