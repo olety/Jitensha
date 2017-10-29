@@ -17,4 +17,13 @@ public class User extends BaseModel {
     @Constraints.Required
     public String passwordHash;
 
+    // Shipping info
+    public String firstName;
+    public String lastName;
+    public String address;
+    public String apartment;
+    public String city;
+    public String postCode;
+    public String country;
+
 }
