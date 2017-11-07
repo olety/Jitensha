@@ -1,0 +1,226 @@
+ProductID,SubcategoryID,Name,Size,SizeUnit,Weight,Cost,Price,Stock,Color,Material,Manufacturer
+775,1,"Kross Scale, Black, 38",38,cm ,20.35,1898.0944,3374.99,6,Black,Carbon fibre,Kross
+776,1,"Kross Scale, Black, 42",42,cm ,20.77,1898.0944,3374.99,1,Black,Carbon fibre,Kross
+772,1,"Kross Scale, Silver, 42",42,cm ,20.77,1912.1544,3399.99,3,Silver,Carbon fibre,Kross
+773,1,"Kross Scale, Silver, 44",44,cm ,21.13,1912.1544,3399.99,0,Silver,Carbon fibre,Kross
+782,1,"B'TWIN Over, Black, 38",38,cm ,23.35,1251.9813,2294.99,0,Black,Aluminium,B'TWIN
+783,1,"B'TWIN Over, Black, 42",42,cm ,23.77,1251.9813,2294.99,5,Black,Aluminium,B'TWIN
+785,1,"Cube Square, 38",38,cm ,25.35,598.4354,1079.99,5,Black,Steel,Cube
+786,1,"Cube Square, 40",40,cm ,25.77,598.4354,1079.99,1,Black,Steel,Cube
+787,1,"Cube Square, 44",44,cm ,26.13,598.4354,1079.99,2,Black,Steel,Cube
+788,1,"Cube Square, 48",48,cm ,26.42,598.4354,1079.99,6,Black,Steel,Cube
+980,1,"Cube Square Law, 38",38,cm ,26.35,419.7784,769.49,7,Silver,Steel,Cube
+983,1,"Cube Square Law, 46",46,cm ,27.42,419.7784,769.49,2,Silver,Steel,Cube
+989,1,"Cube Tesseract, Black, 40",40,cm ,27.35,294.5797,539.99,5,Black,Steel,Cube
+993,1,"Cube Tesseract, Black, 52",52,cm ,28.68,294.5797,539.99,7,Black,Steel,Cube
+985,1,"Cube Tesseract, Silver, 42",42,cm ,27.77,308.2179,564.99,6,Silver,Steel,Cube
+986,1,"Cube Tesseract, Silver, 44",44,cm ,28.13,308.2179,564.99,1,Silver,Steel,Cube
+987,1,"Cube Tesseract, Silver, 48",48,cm ,28.42,308.2179,564.99,3,Silver,Steel,Cube
+988,1,"Cube Tesseract, Silver, 52",52,cm ,28.68,308.2179,564.99,2,Silver,Steel,Cube
+750,2,"B'TWIN Journey, 44",44,cm ,13.77,2171.2942,3578.27,0,Red,Aluminium,B'TWIN
+751,2,"B'TWIN Journey, 48",48,cm ,14.13,2171.2942,3578.27,6,Red,Aluminium,B'TWIN
+752,2,"B'TWIN Journey, 52",52,cm ,14.42,2171.2942,3578.27,2,Red,Aluminium,B'TWIN
+753,2,"B'TWIN Journey, 56",56,cm ,14.68,2171.2942,3578.27,4,Red,Aluminium,B'TWIN
+749,2,"B'TWIN Journey, 62",62,cm ,15,2171.2942,3578.27,5,Red,Aluminium,B'TWIN
+793,2,"B'TWIN Voyage, Black, 44",44,cm ,14.77,1554.9479,2443.35,2,Black,Aluminium,B'TWIN
+794,2,"B'TWIN Voyage, Black, 48",48,cm ,15.13,1554.9479,2443.35,0,Black,Aluminium,B'TWIN
+795,2,"B'TWIN Voyage, Black, 52",52,cm ,15.42,1554.9479,2443.35,1,Black,Aluminium,B'TWIN
+973,2,"Conway Noway, 40",40,cm ,15.35,1082.51,1700.99,2,Yellow,Steel,Conway
+974,2,"Conway Noway, 42",42,cm ,15.77,1082.51,1700.99,1,Yellow,Steel,Conway
+975,2,"Conway Noway, 44",44,cm ,16.13,1082.51,1700.99,7,Yellow,Steel,Conway
+756,2,"Conway Yesway, 44",44,cm ,16.77,884.7083,1457.99,3,Red,Aluminium,Conway
+757,2,"Conway Yesway, 48",48,cm ,17.13,884.7083,1457.99,6,Red,Aluminium,Conway
+758,2,"Conway Yesway, 52",52,cm ,17.42,884.7083,1457.99,7,Red,Aluminium,Conway
+754,2,"Conway Yesway, 58",58,cm ,17.79,884.7083,1457.99,0,Red,Aluminium,Conway
+755,2,"Conway Yesway, 60",60,cm ,17.9,884.7083,1457.99,1,Red,Aluminium,Conway
+798,2,"Romet Romance, 40",40,cm ,17.77,713.0798,1120.49,5,Yellow,Steel,Romet
+799,2,"Romet Romance, 42",42,cm ,18.13,713.0798,1120.49,5,Yellow,Steel,Romet
+800,2,"Romet Romance, 44",44,cm ,18.42,713.0798,1120.49,7,Yellow,Steel,Romet
+768,2,"Kellys Clarkson's, Black, 44",44,cm ,18.77,486.7066,782.99,7,Black,Steel,Kellys
+769,2,"Kellys Clarkson's, Black, 48",48,cm ,19.13,486.7066,782.99,5,Black,Steel,Kellys
+762,2,"Kellys Clarkson's, Red, 44",44,cm ,18.77,486.7066,782.99,6,Red,Steel,Kellys
+763,2,"Kellys Clarkson's, Red, 48",48,cm ,19.13,486.7066,782.99,7,Red,Steel,Kellys
+759,2,"Kellys Clarkson's, Red, 58",58,cm ,19.79,486.7066,782.99,1,Red,Steel,Kellys
+760,2,"Kellys Clarkson's, Red, 60",60,cm ,19.9,486.7066,782.99,6,Red,Steel,Kellys
+761,2,"Kellys Clarkson's, Red, 62",62,cm ,20,486.7066,782.99,1,Red,Steel,Kellys
+997,2,"Jitensha Ichi, 44",44,cm ,19.77,343.6496,539.99,4,Black,Steel,Jitensha Value
+998,2,"Jitensha Ichi, 48",48,cm ,20.13,343.6496,539.99,5,Black,Steel,Jitensha Value
+977,2,"Jitensha Ichi, 58",58,cm ,20.79,343.6496,539.99,7,Black,Steel,Jitensha Value
+966,3,"Cube Nowhere, Blue, 46",46,cm ,25.13,1481.9379,2384.07,0,Blue,Aluminium,Cube
+967,3,"Cube Nowhere, Blue, 50",50,cm ,25.42,1481.9379,2384.07,5,Blue,Aluminium,Cube
+969,3,"Cube Nowhere, Blue, 60",60,cm ,25.9,1481.9379,2384.07,1,Blue,Aluminium,Cube
+956,3,"Cube Nowhere, Yellow, 54",54,cm ,25.68,1481.9379,2384.07,1,Yellow,Aluminium,Cube
+957,3,"Cube Nowhere, Yellow, 60",60,cm ,25.9,1481.9379,2384.07,1,Yellow,Aluminium,Cube
+970,3,"Cube Somewhere, 46",46,cm ,27.13,755.1508,1214.85,1,Blue,Aluminium,Cube
+953,3,"Cube Somewhere, 60",60,cm ,27.9,755.1508,1214.85,1,Blue,Steel,Cube
+978,3,"Cube Everywhere, Blue, 44",44,cm ,28.77,461.4448,742.35,1,Blue,Aluminium,Cube
+960,3,"Cube Everywhere, Blue, 62",62,cm ,30,461.4448,742.35,1,Blue,Steel,Cube
+961,3,"Cube Everywhere, Yellow, 44",44,cm ,28.77,461.4448,742.35,1,Yellow,Steel,Cube
+962,3,"Cube Everywhere, Yellow, 50",50,cm ,29.13,461.4448,742.35,1,Yellow,Steel,Cube
+964,3,"Cube Everywhere, Yellow, 58",58,cm ,29.79,461.4448,742.35,1,Yellow,Steel,Cube
+965,3,"Cube Everywhere, Yellow, 62",62,cm ,30,461.4448,742.35,1,Yellow,Steel,Cube
+808,4,Obvious Duh Mountain Handlebars,70,cm ,0.230,19.7758,44.54,0,Black,Aluminium,Obvious
+809,4,Obvious Mhm Mountain Handlebars,72,cm ,0.240,27.4925,61.92,4,Black,Aluminium,Obvious
+810,4,Obvious FFS Mountain Handlebars,74,cm ,0.214,53.3999,120.27,4,Black,Aluminium,Obvious
+811,4,Obvious Duh Road Handlebars,68,cm ,0.300,19.7758,44.54,2,Silver,Steel,Obvious
+812,4,Obvious Mhm Road Handlebars,69,cm ,0.289,27.4925,61.92,0,Silver,Steel,Obvious
+813,4,Obvious FFS Road Handlebars,69,cm ,0.410,53.3999,120.27,5,Black,Steel,Obvious
+946,4,Obvious Duh Touring Handlebars,83,cm ,0.341,20.464,46.09,3,Silver,Steel,Obvious
+947,4,Obvious FFS Touring Handlebars,75,cm ,0.290,40.6571,91.57,3,Black,Steel,Obvious
+994,5,Obvious Duh Bottom Bracket,71,mm,0.223,23.9716,53.99,4,Silver,Steel,Obvious
+995,5,Obvious Mhm Bottom Bracket,70,mm,0.168,44.9506,101.24,5,Silver,Steel,Obvious
+996,5,Obvious FFS Bottom Bracket,83,mm,0.017,53.9416,121.49,5,Silver,Steel,Obvious
+907,6,Obvious Rear Brakes,92,mm,0.317,47.286,106.5,2,Silver,Ceramics,Obvious
+948,6,Obvious Front Brakes,12,cm ,0.317,47.286,106.5,5,Silver,Ceramics,Obvious
+952,7,Obvious Chain,140,cm ,0.430,8.9866,20.24,3,Silver,Steel,Obvious
+949,8,Obvious Duh Crankset,12,cm ,0.600,77.9176,175.49,1,Black,Steel,Obvious
+950,8,Obvious Mhm Crankset,14,cm ,0.635,113.8816,256.49,5,Black,Steel,Obvious
+951,8,Obvious FFS Crankset,13,cm ,0.575,179.8156,404.99,0,Black,Steel,Obvious
+894,9,Obvious Rear Derailleur,28,cm ,0.215,53.9282,121.46,4,Silver,Steel,Obvious
+945,9,Obvious Front Derailleur,42,cm ,0.880,40.6216,91.49,1,Silver,Steel,Obvious
+802,10,Obvious Duh Fork,70,cm ,0.704,65.8097,148.22,0,Red,Steel,Obvious
+803,10,Obvious Mhm Fork,86,cm ,0.890,77.9176,175.49,0,Black,Steel,Obvious
+804,10,Obvious FFS Fork,89,cm ,0.689,101.8936,229.49,0,Black,Steel,Obvious
+805,11,Obvious Duh Headset,67,mm,0.104,15.1848,34.2,2,Silver,Steel,Obvious
+806,11,Obvious Mhm Headset,78,mm,0.104,45.4168,102.29,3,Silver,Steel,Obvious
+807,11,Obvious FFS Headset,94,mm,0.152,55.3801,124.73,4,Silver,Steel,Obvious
+741,12,"Miranda Everest, Silver, 48",48,cm ,2.8,706.811,1364.5,1,Silver,Aluminium,Miranda
+742,12,"Miranda Everest, Silver, 46",46,cm ,2.84,747.2002,1364.5,3,Silver,Aluminium,Miranda
+743,12,"Miranda Everest, Black, 42",42,cm ,2.72,739.041,1349.6,2,Black,Aluminium,Miranda
+748,12,"Miranda Everest, Silver, 38",38,cm ,2.68,747.2002,1364.5,1,Silver,Aluminium,Miranda
+814,12,"Tweed Caveman, 38",38,cm ,2.73,185.8193,348.76,1,Black,Steel,Tweed
+830,12,"Tweed Caveman, 40",40,cm ,2.77,185.8193,348.76,0,Black,Steel,Tweed
+832,12,"Tweed Caveman, 48",48,cm ,2.85,185.8193,348.76,2,Black,Steel,Tweed
+904,12,"Cube Circle, 40",40,cm ,2.77,199.3757,364.09,1,Silver,Steel,Cube
+905,12,"Cube Circle, 42",42,cm ,2.81,199.3757,364.09,2,Silver,Steel,Cube
+906,12,"Cube Circle, 46",46,cm ,2.85,199.3757,364.09,2,Silver,Steel,Cube
+917,12,"Cube Triangle, Silver, 42",42,cm ,2.92,144.5938,264.05,4,Silver,Steel,Cube
+918,12,"Cube Triangle, Silver, 44",44,cm ,2.96,144.5938,264.05,5,Silver,Steel,Cube
+920,12,"Cube Triangle, Silver, 52",52,cm ,3.04,144.5938,264.05,0,Silver,Steel,Cube
+924,12,"Cube Triangle, Black, 42",42,cm ,2.92,136.785,249.79,0,Black,Steel,Cube
+926,12,"Cube Triangle, Black, 48",48,cm ,3,136.785,249.79,2,Black,Steel,Cube
+927,12,"Cube Triangle, Black, 52",52,cm ,3.04,136.785,249.79,2,Black,Steel,Cube
+943,12,"Cube Triangle, Black, 40",40,cm ,2.88,136.785,249.79,0,Black,Steel,Cube
+944,12,"Cube Triangle, Silver, 40",40,cm ,2.88,144.5938,264.05,4,Silver,Steel,Cube
+935,13,Kross Once,12,cm ,0.218,17.9776,40.49,5,Silver/Black,Steel,Kross
+936,13,Kross Twice,11,cm ,0.215,27.568,62.09,4,Silver/Black,Steel,Kross
+937,13,Kross Thrice,12,cm ,0.185,35.9596,80.99,4,Silver/Black,Steel,Kross
+938,13,Kross Single,12,cm ,0.189,17.9776,40.49,3,Silver/Black,Plastic,Kross
+940,13,Kross Quad,11,cm ,0.149,35.9596,80.99,5,Silver/Black,Plastic,Kross
+941,13,Kross Cross,11,cm ,0.32,35.9596,80.99,2,Silver/Black,Plastic,Kross
+680,14,"Miranda Chillax, Black, 58",58,cm ,2.24,1059.31,1431.5,3,Black,Aluminium,Miranda
+706,14,"Miranda Chillax, Red, 58",58,cm ,2.24,1059.31,1431.5,1,Red,Aluminium,Miranda
+717,14,"Miranda Chillax, Red, 62",62,cm ,2.3,868.6342,1431.5,2,Red,Aluminium,Miranda
+718,14,"Miranda Chillax, Red, 44",44,cm ,2.12,868.6342,1431.5,0,Red,Aluminium,Miranda
+723,14,"Tweed Go On, Black, 60",60,cm ,2.48,204.6251,337.22,1,Black,Steel,Tweed
+724,14,"Tweed Go On, Black, 62",62,cm ,2.5,204.6251,337.22,1,Black,Steel,Tweed
+725,14,"Tweed Go On, Red, 44",44,cm ,2.32,187.1571,337.22,2,Red,Steel,Tweed
+727,14,"Tweed Go On, Red, 52",52,cm ,2.4,187.1571,337.22,5,Red,Steel,Tweed
+728,14,"Tweed Go On, Red, 58",58,cm ,2.46,187.1571,337.22,5,Red,Steel,Tweed
+729,14,"Tweed Go On, Red, 60",60,cm ,2.48,187.1571,337.22,4,Red,Steel,Tweed
+730,14,"Tweed Go On, Red, 62",62,cm ,2.5,187.1571,337.22,0,Red,Steel,Tweed
+731,14,"Tweed Keep On, Red, 44",44,cm ,2.22,352.1394,594.83,1,Red,Steel,Tweed
+732,14,"Tweed Keep On, Red, 48",48,cm ,2.26,352.1394,594.83,1,Red,Steel,Tweed
+734,14,"Tweed Keep On, Red, 58",58,cm ,2.36,352.1394,594.83,1,Red,Steel,Tweed
+735,14,"Tweed Keep On, Red, 60",60,cm ,2.38,352.1394,594.83,4,Red,Steel,Tweed
+736,14,"Tweed Go On, Black, 44",44,cm ,2.32,204.6251,337.22,1,Black,Steel,Tweed
+737,14,"Tweed Go On, Black, 48",48,cm ,2.36,204.6251,337.22,2,Black,Steel,Tweed
+822,14,"Tweed Comfy, 38",38,cm ,2.18,360.9428,594.83,2,Yellow,Steel,Tweed
+833,14,"Tweed Comfy, 40",40,cm ,2.22,360.9428,594.83,4,Yellow,Steel,Tweed
+834,14,"Tweed Comfy, 42",42,cm ,2.26,360.9428,594.83,4,Yellow,Steel,Tweed
+836,14,"Tweed Comfy, 48",48,cm ,2.34,360.9428,594.83,4,Yellow,Steel,Tweed
+837,14,"Miranda Chillax, Black, 62",62,cm ,2.3,868.6342,1431.5,2,Black,Aluminium,Miranda
+838,14,"Miranda Chillax, Black, 44",44,cm ,2.12,868.6342,1431.5,5,Black,Aluminium,Miranda
+839,14,"Miranda Chillax, Black, 48",48,cm ,2.16,868.6342,1431.5,2,Black,Aluminium,Miranda
+840,14,"Miranda Chillax, Black, 52",52,cm ,2.2,868.6342,1431.5,3,Black,Aluminium,Miranda
+909,15,ML Mountain Seat/Saddle,21,cm ,0.19,17.3782,39.14,0,Black,Leather,Dartmoor
+910,15,HL Mountain Seat/Saddle,19,cm ,0.155,23.3722,52.64,5,Black,Leather,Cube
+912,15,ML Road Seat/Saddle,27,cm ,0.125,17.3782,39.14,2,Black,Leather,Cube
+913,15,HL Road Seat/Saddle,26,cm ,0.132,23.3722,52.64,2,Blue,Leather,Tweed
+914,15,LL Touring Seat/Saddle,28,cm ,0.17,12.0413,27.12,0,Yellow,Leather,Ello
+916,15,HL Touring Seat/Saddle,27,cm ,0.129,23.3722,52.64,3,Yellow,Leather,Romet
+885,16,"Cube France, Yellow, 60",60,cm ,3.08,601.7437,1003.91,2,Yellow,Steel,Cube
+886,16,"Cube Polognee, Yellow, 62",62,cm ,3.2,199.8519,333.42,3,Yellow,Steel,Cube
+887,16,"Cube France, Yellow, 46",46,cm ,2.96,601.7437,1003.91,4,Yellow,Steel,Cube
+888,16,"Cube France, Yellow, 50",50,cm ,3,601.7437,1003.91,5,Yellow,Steel,Cube
+890,16,"Cube France, Blue, 46",46,cm ,2.96,601.7437,1003.91,5,Blue,Steel,Cube
+891,16,"Cube France, Blue, 50",50,cm ,3,601.7437,1003.91,5,Blue,Steel,Cube
+892,16,"Cube France, Blue, 54",54,cm ,3.04,601.7437,1003.91,2,Blue,Steel,Cube
+893,16,"Cube France, Blue, 60",60,cm ,3.08,601.7437,1003.91,0,Blue,Steel,Cube
+895,16,"Cube Polognee, Blue, 50",50,cm ,3.1,199.8519,333.42,4,Blue,Steel,Cube
+896,16,"Cube Polognee, Blue, 54",54,cm ,3.14,199.8519,333.42,3,Blue,Steel,Cube
+898,16,"Cube Polognee, Blue, 62",62,cm ,3.2,199.8519,333.42,5,Blue,Steel,Cube
+899,16,"Cube Polognee, Yellow, 44",44,cm ,3.02,199.8519,333.42,1,Yellow,Steel,Cube
+901,16,"Cube Polognee, Yellow, 54",54,cm ,3.14,199.8519,333.42,1,Yellow,Steel,Cube
+902,16,"Cube Polognee, Yellow, 58",58,cm ,3.16,199.8519,333.42,0,Yellow,Steel,Cube
+903,16,"Cube Polognee, Blue, 44",44,cm ,3.02,199.8519,333.42,4,Blue,Steel,Cube
+815,17,Michelin Mountain Star,622,mm,1.2,26.9708,60.745,4,Black,Steel,Michelin
+816,17,Michelin Mountain Constellation,584,mm,0.905,92.8071,209.025,4,Black,Aluminium,Michelin
+817,17,Michelin Mountain Galaxy,559,mm,0.85,133.2955,300.215,2,Black,Aluminium,Michelin
+818,17,Michelin Road Star,622,mm,0.9,37.9909,85.565,2,Black,Steel,Michelin
+819,17,Michelin Road Constellation,584,mm,0.85,110.2829,248.385,1,Black,Aluminium,Michelin
+820,17,Michelin Road Galaxy,559,mm,0.65,146.5466,330.06,1,Black,Aluminium,Michelin
+821,17,Touring Front Wheel,584,mm,1.23,96.7964,218.01,0,Black,Aluminium,Michelin
+857,18,"Men's Bib-Shorts, L",NULL,L,NULL,37.1209,89.99,2,Multi,Elastic,Bike Fashion
+856,18,"Men's Bib-Shorts, M",NULL,M,NULL,37.1209,89.99,3,Multi,Elastic,Bike Fashion
+855,18,"Men's Bib-Shorts, S",NULL,S,NULL,37.1209,89.99,5,Multi,Elastic,Bike Fashion
+712,19,AWC Logo Cap,NULL,M,NULL,6.9223,8.99,0,Multi,Polyester,Bike Fashion
+863,20,"Full-Finger Gloves, L",NULL,L,NULL,15.6709,37.99,2,Black,Polyester,Bike Fashion
+862,20,"Full-Finger Gloves, M",NULL,M,NULL,15.6709,37.99,5,Black,Polyester,Bike Fashion
+861,20,"Full-Finger Gloves, S",NULL,S,NULL,15.6709,37.99,2,Black,Polyester,Bike Fashion
+860,20,"Half-Finger Gloves, L",NULL,L,NULL,9.1593,24.49,4,Black,Polyester,Bike Fashion
+859,20,"Half-Finger Gloves, M",NULL,M,NULL,9.1593,24.49,0,Black,Polyester,Bike Fashion
+858,20,"Half-Finger Gloves, S",NULL,S,NULL,9.1593,24.49,0,Black,Polyester,Bike Fashion
+715,21,"Long-Sleeve Logo Jersey, L",NULL,L,NULL,38.4923,49.99,3,Multi,Cotton,Bike Fashion
+714,21,"Long-Sleeve Logo Jersey, M",NULL,M,NULL,38.4923,49.99,1,Multi,Cotton,Bike Fashion
+713,21,"Long-Sleeve Logo Jersey, S",NULL,S,NULL,38.4923,49.99,1,Multi,Cotton,Bike Fashion
+716,21,"Long-Sleeve Logo Jersey, XL",NULL,XL,NULL,38.4923,49.99,1,Multi,Cotton,Bike Fashion
+883,21,"Short-Sleeve Classic Jersey, L",NULL,L,NULL,41.5723,53.99,5,Yellow,Cotton,Bike Fashion
+882,21,"Short-Sleeve Classic Jersey, M",NULL,M,NULL,41.5723,53.99,3,Yellow,Cotton,Bike Fashion
+881,21,"Short-Sleeve Classic Jersey, S",NULL,S,NULL,41.5723,53.99,3,Yellow,Cotton,Bike Fashion
+884,21,"Short-Sleeve Classic Jersey, XL",NULL,XL,NULL,41.5723,53.99,7,Yellow,Cotton,Bike Fashion
+850,22,"Men's Sports Shorts, L",NULL,L,NULL,24.7459,59.99,0,Black,Polyester,Bike Fashion
+849,22,"Men's Sports Shorts, M",NULL,M,NULL,24.7459,59.99,1,Black,Polyester,Bike Fashion
+841,22,"Men's Sports Shorts, S",NULL,S,NULL,24.7459,59.99,3,Black,Polyester,Bike Fashion
+851,22,"Men's Sports Shorts, XL",NULL,XL,NULL,24.7459,59.99,1,Black,Polyester,Bike Fashion
+869,22,"Women's Mountain Shorts, L",NULL,L,NULL,26.1763,69.99,2,Black,Elastic,Bike Fashion
+868,22,"Women's Mountain Shorts, M",NULL,M,NULL,26.1763,69.99,2,Black,Elastic,Bike Fashion
+867,22,"Women's Mountain Shorts, S",NULL,S,NULL,26.1763,69.99,2,Black,Elastic,Bike Fashion
+710,23,"Mountain Bike Socks, L",NULL,L,NULL,3.3963,9.5,1,White,Cotton,Bike Fashion
+709,23,"Mountain Bike Socks, M",NULL,M,NULL,3.3963,9.5,0,White,Cotton,Bike Fashion
+875,23,"Racing Socks, L",NULL,L,NULL,3.3623,8.99,2,White,Cotton,Bike Fashion
+874,23,"Racing Socks, M",NULL,M,NULL,3.3623,8.99,7,White,Cotton,Bike Fashion
+854,24,"Women's Tights, L",NULL,L,NULL,30.9334,74.99,3,Black,Nylon,Bike Fashion
+853,24,"Women's Tights, M",NULL,M,NULL,30.9334,74.99,0,Black,Nylon,Bike Fashion
+852,24,"Women's Tights, S",NULL,S,NULL,30.9334,74.99,7,Black,Nylon,Bike Fashion
+866,25,"Classic Vest, L",NULL,L,NULL,23.749,63.5,3,Blue,Leather,Bike Fashion
+865,25,"Classic Vest, M",NULL,M,NULL,23.749,63.5,0,Blue,Leather,Bike Fashion
+864,25,"Classic Vest, S",NULL,S,NULL,23.749,63.5,4,Blue,Leather,Bike Fashion
+876,26,Hitch Rack - 4-Bike,80,cm ,4.500,44.88,120,5,Green,Plastic,Miranda
+879,27,All-Purpose Bike Stand,65,cm ,1.200,59.466,159,1,Blue,Plastic,Kellys
+871,28,Mountain Bottle Cage,21,cm ,0.094,3.7363,9.99,2,Black,Plastic,Jitensha Value
+872,28,Road Bottle Cage,24,cm ,0.084,3.3623,8.99,2,White,Plastic,Jitensha Value
+870,28,Water Bottle - 30 oz.,37,cm ,0.120,1.8663,4.99,1,Clear,Plastic,Jitensha Value
+877,29,Bike Wash - Dissolver,NULL,NULL,0.500,2.9733,7.95,3,Clear,Other,Jitensha Value
+878,30,Fender Set - Mountain,89,cm ,0.120,8.2205,21.98,5,Red,Plastic,Cube
+708,31,"Cube Breakneck, Black",28,cm ,0.289,13.0863,34.99,1,Black,Glass fibre,Cube
+711,31,"Cube Breakneck, Blue",30,cm ,0.289,13.0863,34.99,5,Blue,Glass fibre,Cube
+707,31,"Cube Breakneck, Red",31,cm ,0.341,13.0863,34.99,7,Red,Glass fibre,Cube
+847,33,Headlights - Dual-Beam,NULL,NULL,0.050,14.4334,34.99,1,White,Plastic,Ello
+848,33,Headlights - Weatherproof,NULL,NULL,0.060,18.5584,44.99,0,Blue,Plastic,Conway
+846,33,Taillights - Battery-Powered,NULL,NULL,0.091,5.7709,13.99,6,Red,Plastic,Ello
+843,34,Cable Lock,90,cm ,0.340,10.3125,25,3,Purple,Steel,Ello
+842,35,"Touring-Panniers, Large",80,cm ,0.800,51.5625,125,3,Grey,Leather,Ello
+844,36,Minipump,30,cm ,0.240,8.2459,19.99,2,Purple,Plastic,Conway
+845,36,Mountain Pump,54,cm ,0.600,10.3084,24.99,4,Brown,Aluminium,Cube
+930,37,Kross Me,32,mm,0.100,13.09,35,1,Black,Rubber,Kross
+933,37,Kross You,13,mm,0.100,12.1924,32.6,1,Black,Rubber,Kross
+928,37,Kellys Uphill,34,mm,0.100,9.3463,24.99,4,Black,Rubber,Kellys
+931,37,Kellys Highway,17,mm,0.100,8.0373,21.49,0,Black,Rubber,Kellys
+929,37,Kellys Downhill,35,mm,0.100,11.2163,29.99,1,Black,Rubber,Kellys
+932,37,Kellys Yourway,16,mm,0.100,9.3463,24.99,5,Black,Rubber,Kellys
+921,37,Mountain Tire Tube,200,cm ,0.090,1.8663,4.99,1,Black,Rubber,Kellys
+873,37,Patch Kit/8 Patches,80,mm,NULL,0.8565,2.29,0,Black,Synthetic,Jitensha Value
+922,37,Road Tire Tube,200,cm ,0.060,1.4923,3.99,5,Black,Rubber,Kross
+934,37,Touring Tire,26,mm,0.120,10.8423,28.99,2,Black,Rubber,Kross
+923,37,Touring Tire Tube,200,cm ,0.075,1.8663,4.99,5,Black,Rubber,Kross
