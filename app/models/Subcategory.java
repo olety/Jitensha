@@ -10,13 +10,10 @@ import java.util.*;
 public class Subcategory extends BaseModel {
 
     private static final long serialVersionUID = 1L;
-	
-	@Constraints.Required
-    public long subcategoryID;
-	
-	@Constraints.Required
-    public Category category;
-	
-	public String name;
+
+    @Constraints.Required
+    public Subcategory categoryID;
+
+    public String name;
 
 }
