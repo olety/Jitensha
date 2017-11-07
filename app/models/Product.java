@@ -1,5 +1,6 @@
 package models;
 
+import lombok.Data;
 import play.data.format.*;
 import play.data.validation.*;
 
@@ -8,6 +9,7 @@ import java.util.*;
 import java.math.BigDecimal;
 
 @Entity
+@Data
 public class Product extends BaseModel {
 
     private static final long serialVersionUID = 1L;
