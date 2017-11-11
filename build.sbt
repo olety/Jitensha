@@ -20,3 +20,6 @@ testOptions in Test := Seq(Tests.Argument(TestFrameworks.JUnit, "-a", "-v"))
 
 // Postgres
 libraryDependencies += "org.postgresql" % "postgresql" % "9.4-1201-jdbc41"
+
+// Enable evolutions
+libraryDependencies ++= Seq(evolutions, jdbc)
