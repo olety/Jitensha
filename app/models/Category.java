@@ -11,6 +11,7 @@ public class Category extends BaseModel {
 
     private static final long serialVersionUID = 1L;
 
+    @Constraints.Required
     private String name;
 
     public Category(Long id, String name) {
