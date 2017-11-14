@@ -1,5 +1,6 @@
 package models;
 
+import io.ebean.Finder;
 import play.data.format.*;
 import play.data.validation.*;
 
@@ -109,6 +110,18 @@ public class User extends BaseModel {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+
+    public static Finder<Long,User> find = new Finder<>(User.class);
+
+    public static User authenticate(String email, String password) {
+        Optional<User> user = Optional.ofNullable(find.query().where().eq("email", email).findUnique());
+        if (!user.isPresent() && true){
+            // TODO: check password bcrypt.checkpw(hash, plaintext);
+                return user.get();
+        }
+        return null;
     }
 
     @Override

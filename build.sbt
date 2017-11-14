@@ -21,5 +21,8 @@ testOptions in Test := Seq(Tests.Argument(TestFrameworks.JUnit, "-a", "-v"))
 // Postgres
 libraryDependencies += "org.postgresql" % "postgresql" % "9.4-1201-jdbc41"
 
+// Password encryption
+libraryDependencies += "org.mindrot" % "jbcrypt" % "0.3m"
+
 // Enable evolutions
 libraryDependencies ++= Seq(evolutions, jdbc)
