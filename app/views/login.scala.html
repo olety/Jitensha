@@ -2,9 +2,9 @@
 @main("Jitensha - Login") {
         <body>
         @helper.form(routes.AuthController.authenticate) {
-                <div class="container d-flex align-items-center h-100">
+                <div class="container">
                     <div class="row">
-                        <div class="col-md-6 col-md-offset-3">
+                        <div class="col-md-6 offset-md-3">
                             <h1 class="text-center text-primary"><a href='@routes.HomeController.index()' class="nounderline">JITENSHA</a></h1>
                             @if(form.hasErrors) {
                                 <div class="alert alert-error">
