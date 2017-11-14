@@ -10,12 +10,17 @@ import java.util.*;
 @Entity
 public class User extends BaseModel {
 
+    public static final Finder<Long, User> find = new Finder<>(User.class);
+
     private static final long serialVersionUID = 1L;
 
     @Constraints.Required
+    @Formats.NonEmpty
+    @Column(unique = true)
     private String email;
 
     @Constraints.Required
+    @Formats.NonEmpty
     private String passwordHash;
 
     // Shipping info
@@ -27,8 +32,11 @@ public class User extends BaseModel {
     private String postCode;
     private String country;
 
-    public User(Long id, String email, String passwordHash, String firstName, String lastName, String address, String apartment, String city, String postCode, String country) {
-        super(id);
+    public User() {
+        super();
+    }
+
+    public User(String email, String passwordHash, String firstName, String lastName, String address, String apartment, String city, String postCode, String country) {
         this.email = email;
         this.passwordHash = passwordHash;
         this.firstName = firstName;
@@ -112,16 +120,20 @@ public class User extends BaseModel {
         this.country = country;
     }
 
-
-    public static Finder<Long,User> find = new Finder<>(User.class);
-
     public static User authenticate(String email, String password) {
         Optional<User> user = Optional.ofNullable(find.query().where().eq("email", email).findUnique());
-        if (!user.isPresent() && true){
+        if (!user.isPresent() && true) {
             // TODO: check password bcrypt.checkpw(hash, plaintext);
-                return user.get();
+            return user.get();
         }
         return null;
+    }
+
+    public static User findByEmail(String email) {
+        return find.query()
+                .where()
+                .eq("email", email)
+                .findUnique();
     }
 
     @Override

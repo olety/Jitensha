@@ -17,8 +17,7 @@ public class Compatibility extends BaseModel {
     @Constraints.Required
     private long componentProductID;
 
-    public Compatibility(Long id, long bikeProductID, long componentProductID) {
-        super(id);
+    public Compatibility(long bikeProductID, long componentProductID) {
         this.bikeProductID = bikeProductID;
         this.componentProductID = componentProductID;
     }

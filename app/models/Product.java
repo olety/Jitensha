@@ -28,9 +28,8 @@ public class Product extends BaseModel {
     private String material;
     private String manufacturer;
 
-    public Product(Long id, long subcategoryID, String name, BigDecimal size, String sizeUnit,
+    public Product(long subcategoryID, String name, BigDecimal size, String sizeUnit,
                    BigDecimal weight, BigDecimal cost, BigDecimal price, int stock, String color, String material, String manufacturer) {
-        super(id);
         this.subcategoryID = subcategoryID;
         this.name = name;
         this.size = size;

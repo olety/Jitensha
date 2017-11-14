@@ -14,8 +14,8 @@ public class Category extends BaseModel {
     @Constraints.Required
     private String name;
 
-    public Category(Long id, String name) {
-        super(id);
+
+    public Category(String name) {
         this.name = name;
     }
 

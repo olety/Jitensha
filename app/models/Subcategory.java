@@ -17,8 +17,7 @@ public class Subcategory extends BaseModel {
     @Constraints.Required
     private String name;
 
-    public Subcategory(Long id, @Constraints.Required Subcategory categoryID, String name) {
-        super(id);
+    public Subcategory(@Constraints.Required Subcategory categoryID, String name) {
         this.categoryID = categoryID;
         this.name = name;
     }
