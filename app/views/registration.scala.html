@@ -1,15 +1,11 @@
 @(form: Form[RegistrationController.RegistrationForm])
-@main("Welcome to Play") {
-    <head>
-        <title>Jitensha</title>
-    </head>
-
+@main("JITENSHA") {
     <body>
     @helper.form(routes.RegistrationController.register) {
         <div class="container">
             <div class="row">
                 <div class="col-md-8 offset-md-2">
-                    <h1 class="text-center text-primary">JITENSHA</h1>
+                    <h1 class="text-center text-primary"><a href='@routes.HomeController.index()' class="nounderline">JITENSHA</a></h1>
                     <form>
                         <div class="form-row">
                             <div class="form-group col-md-6">

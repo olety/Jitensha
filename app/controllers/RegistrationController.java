@@ -80,6 +80,7 @@ public class RegistrationController extends Controller {
         } catch (Throwable e) {
             Logger.info("Experienced problems when trying to save the user. {}", e.toString());
             return badRequest(registration.render(registerForm));
+
         }
     }
 
