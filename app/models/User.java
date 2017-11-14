@@ -1,6 +1,8 @@
 package models;
 
 import io.ebean.Finder;
+import org.mindrot.jbcrypt.BCrypt;
+import play.Logger;
 import play.data.format.*;
 import play.data.validation.*;
 
@@ -8,6 +10,7 @@ import javax.persistence.*;
 import java.util.*;
 
 @Entity
+@Table (name="users")
 public class User extends BaseModel {
 
     public static final Finder<Long, User> find = new Finder<>(User.class);
@@ -21,14 +24,18 @@ public class User extends BaseModel {
 
     @Constraints.Required
     @Formats.NonEmpty
+    @Column (name="passwordhash")
     private String passwordHash;
 
     // Shipping info
+    @Column (name="firstname")
     private String firstName;
+    @Column (name="lastname")
     private String lastName;
     private String address;
     private String apartment;
     private String city;
+    @Column (name="postcode")
     private String postCode;
     private String country;
 
@@ -121,11 +128,14 @@ public class User extends BaseModel {
     }
 
     public static User authenticate(String email, String password) {
-        Optional<User> user = Optional.ofNullable(find.query().where().eq("email", email).findUnique());
-        if (!user.isPresent() && true) {
-            // TODO: check password bcrypt.checkpw(hash, plaintext);
+        Optional<User> user = Optional.ofNullable(User.findByEmail(email));
+        Logger.info("Retrieved the user nullable {}", user.get());
+        Logger.info("isPresent {}", user.isPresent());
+        if (user.isPresent() && true){//&& BCrypt.checkpw(user.get().passwordHash, password)) {
+            Logger.info("User successfully validated {}", user.get());
             return user.get();
         }
+        Logger.info("Couldn't validate the user");
         return null;
     }
 

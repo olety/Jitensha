@@ -13,6 +13,7 @@ import play.data.validation.Constraints.Validatable;
 import play.data.validation.ValidationError;
 
 public class AuthController extends Controller {
+
     @Constraints.Validate
     public static class LoginForm implements Validatable<ValidationError> {
         @Constraints.Required

@@ -2,6 +2,7 @@ package controllers;
 
 import models.User;
 import org.mindrot.jbcrypt.BCrypt;
+import play.Logger;
 import play.api.i18n.Lang;
 import play.api.libs.Crypto$;
 import play.data.Form;
@@ -50,9 +51,9 @@ public class RegistrationController extends Controller {
     }
 
     public Result register() {
-
+        Logger.info("Registration controller.");
         Form<RegistrationForm> registerForm = formFactory.form(RegistrationForm.class).bindFromRequest();
-
+        Logger.info("Got registration form {}", registerForm);
         RegistrationForm registrationControll = registerForm.get();
 
         Result resultError = checkBeforeSave(registerForm, registrationControll.email);
@@ -72,10 +73,13 @@ public class RegistrationController extends Controller {
             newUser.setCountry(registrationControll.country);
             newUser.setPostCode(registrationControll.postCode);
             newUser.setPasswordHash(BCrypt.hashpw(registrationControll.password, BCrypt.gensalt()));
+            Logger.info("Trying to save the user {}", newUser);
             newUser.save();
-            return ok();
+            Logger.info("Successfully saved the user {}", newUser);
+            return redirect(routes.HomeController.index());
         } catch (Throwable e) {
-            return ok();
+            Logger.info("Experienced problems when trying to save the user. {}", e.toString());
+            return badRequest(registration.render(registerForm));
         }
     }
 
