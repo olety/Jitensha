@@ -10,6 +10,8 @@ GET     /                           controllers.HomeController.index
 GET     /login                      controllers.AuthController.login
 POST    /login                      controllers.AuthController.authenticate
 
+#POST     /logout                      controllers.AuthController.logout
+
 GET     /register                      controllers.RegistrationController.getRegistrationForm
 POST    /register                      controllers.RegistrationController.register
 

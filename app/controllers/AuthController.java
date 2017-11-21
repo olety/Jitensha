@@ -77,6 +77,7 @@ public class AuthController extends Controller {
             Logger.info("Inside values: {}",loginForm.get());
             session().clear();
             session("email", loginForm.get().getEmail());
+
             return redirect(routes.HomeController.index());
         }
 
