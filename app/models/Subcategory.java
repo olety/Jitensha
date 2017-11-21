@@ -1,5 +1,6 @@
 package models;
 
+import io.ebean.Finder;
 import play.data.format.*;
 import play.data.validation.*;
 
@@ -10,23 +11,24 @@ import java.util.*;
 public class Subcategory extends BaseModel {
 
     private static final long serialVersionUID = 1L;
+    public static final Finder<Long, Subcategory> find = new Finder<>(Subcategory.class);
 
     @Constraints.Required
-    private Subcategory categoryID;
+    private long categoryID;
 
     @Constraints.Required
     private String name;
 
-    public Subcategory(@Constraints.Required Subcategory categoryID, String name) {
+    public Subcategory(@Constraints.Required long categoryID, String name) {
         this.categoryID = categoryID;
         this.name = name;
     }
 
-    public Subcategory getCategoryID() {
+    public long getCategoryID() {
         return categoryID;
     }
 
-    public void setCategoryID(Subcategory categoryID) {
+    public void setCategoryID(long categoryID) {
         this.categoryID = categoryID;
     }
 
@@ -67,4 +69,11 @@ public class Subcategory extends BaseModel {
                 ", name='" + name + '\'' +
                 '}';
     }
+    public static Subcategory findById(long id) {
+        return find.query()
+                .where()
+                .eq("id", id)
+                .findUnique();
+    }
+
 }

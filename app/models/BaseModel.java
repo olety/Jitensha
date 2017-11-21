@@ -8,11 +8,11 @@ import javax.persistence.MappedSuperclass;
 public class BaseModel extends Model {
 
    @Id
-   protected Long id;
+   protected long id;
 
    public BaseModel() { }
 
-   public Long getId() {
+   public long getId() {
       return id;
    }
 
@@ -27,12 +27,7 @@ public class BaseModel extends Model {
 
       BaseModel baseModel = (BaseModel) o;
 
-      return getId() != null ? getId().equals(baseModel.getId()) : baseModel.getId() == null;
-   }
-
-   @Override
-   public int hashCode() {
-      return getId() != null ? getId().hashCode() : 0;
+      return getId() == baseModel.getId();
    }
 
    @Override
