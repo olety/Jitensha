@@ -154,73 +154,73 @@ bracket_bottom_1,5,Obvious Duh Bottom Bracket,71,mm,0.223,23.9716,53.99,4,Silver
 901,16,"Cube Polognee, Yellow, 54",54,cm ,3.14,199.8519,333.42,1,Yellow,Steel,Cube,frame_touring_2_yellow
 902,16,"Cube Polognee, Yellow, 58",58,cm ,3.16,199.8519,333.42,0,Yellow,Steel,Cube,frame_touring_2_yellow
 903,16,"Cube Polognee, Blue, 44",44,cm ,3.02,199.8519,333.42,4,Blue,Steel,Cube,frame_touring_2_blue
-815,17,Michelin Mountain Star,622,mm,1.2,26.9708,60.745,4,Black,Steel,Michelin,michelin_mountain_star
-816,17,Michelin Mountain Constellation,584,mm,0.905,92.8071,209.025,4,Black,Aluminium,Michelin,michelin_mountain_constellation
-817,17,Michelin Mountain Galaxy,559,mm,0.85,133.2955,300.215,2,Black,Aluminium,Michelin,michelin_mountain_galaxy
-818,17,Michelin Road Star,622,mm,0.9,37.9909,85.565,2,Black,Steel,Michelin,michelin_road_star
-819,17,Michelin Road Constellation,584,mm,0.85,110.2829,248.385,1,Black,Aluminium,Michelin,michelin_road_constellation
-820,17,Michelin Road Galaxy,559,mm,0.65,146.5466,330.06,1,Black,Aluminium,Michelin,michelin_road_galaxy
-821,17,Touring Front Wheel,584,mm,1.23,96.7964,218.01,0,Black,Aluminium,Michelin,touring_front_wheel
-857,18,"Men's Bib-Shorts, L",NULL,L,NULL,37.1209,89.99,2,Multi,Elastic,Bike Fashion,mens_bib_shorts
-856,18,"Men's Bib-Shorts, M",NULL,M,NULL,37.1209,89.99,3,Multi,Elastic,Bike Fashion,mens_bib_shorts
-855,18,"Men's Bib-Shorts, S",NULL,S,NULL,37.1209,89.99,5,Multi,Elastic,Bike Fashion,mens_bib_shorts
-712,19,AWC Logo Cap,NULL,M,NULL,6.9223,8.99,0,Multi,Polyester,Bike Fashion,awc_logo_cap
-863,20,"Full-Finger Gloves, L",NULL,L,NULL,15.6709,37.99,2,Black,Polyester,Bike Fashion,full_finger_gloves
-862,20,"Full-Finger Gloves, M",NULL,M,NULL,15.6709,37.99,5,Black,Polyester,Bike Fashion,full_finger_gloves
-861,20,"Full-Finger Gloves, S",NULL,S,NULL,15.6709,37.99,2,Black,Polyester,Bike Fashion,full_finger_gloves
-860,20,"Half-Finger Gloves, L",NULL,L,NULL,9.1593,24.49,4,Black,Polyester,Bike Fashion,half_finger_gloves
-859,20,"Half-Finger Gloves, M",NULL,M,NULL,9.1593,24.49,0,Black,Polyester,Bike Fashion,half_finger_gloves
-858,20,"Half-Finger Gloves, S",NULL,S,NULL,9.1593,24.49,0,Black,Polyester,Bike Fashion,half_finger_gloves
-715,21,"Long-Sleeve Logo Jersey, L",NULL,L,NULL,38.4923,49.99,3,Multi,Cotton,Bike Fashion,long_sleeve_logo_jersey
-714,21,"Long-Sleeve Logo Jersey, M",NULL,M,NULL,38.4923,49.99,1,Multi,Cotton,Bike Fashion,long_sleeve_logo_jersey
-713,21,"Long-Sleeve Logo Jersey, S",NULL,S,NULL,38.4923,49.99,1,Multi,Cotton,Bike Fashion,long_sleeve_logo_jersey
-716,21,"Long-Sleeve Logo Jersey, XL",NULL,XL,NULL,38.4923,49.99,1,Multi,Cotton,Bike Fashion,long_sleeve_logo_jersey
-883,21,"Short-Sleeve Classic Jersey, L",NULL,L,NULL,41.5723,53.99,5,Yellow,Cotton,Bike Fashion,short_sleeve_classic_jersey
-882,21,"Short-Sleeve Classic Jersey, M",NULL,M,NULL,41.5723,53.99,3,Yellow,Cotton,Bike Fashion,short_sleeve_classic_jersey
-881,21,"Short-Sleeve Classic Jersey, S",NULL,S,NULL,41.5723,53.99,3,Yellow,Cotton,Bike Fashion,short_sleeve_classic_jersey
-884,21,"Short-Sleeve Classic Jersey, XL",NULL,XL,NULL,41.5723,53.99,7,Yellow,Cotton,Bike Fashion,short_sleeve_classic_jersey
-850,22,"Men's Sports Shorts, L",NULL,L,NULL,24.7459,59.99,0,Black,Polyester,Bike Fashion,mens_sports_shorts
-849,22,"Men's Sports Shorts, M",NULL,M,NULL,24.7459,59.99,1,Black,Polyester,Bike Fashion,mens_sports_shorts
-841,22,"Men's Sports Shorts, S",NULL,S,NULL,24.7459,59.99,3,Black,Polyester,Bike Fashion,mens_sports_shorts
-851,22,"Men's Sports Shorts, XL",NULL,XL,NULL,24.7459,59.99,1,Black,Polyester,Bike Fashion,mens_sports_shorts
-869,22,"Women's Mountain Shorts, L",NULL,L,NULL,26.1763,69.99,2,Black,Elastic,Bike Fashion,womens_mountain_shorts
-868,22,"Women's Mountain Shorts, M",NULL,M,NULL,26.1763,69.99,2,Black,Elastic,Bike Fashion,womens_mountain_shorts
-867,22,"Women's Mountain Shorts, S",NULL,S,NULL,26.1763,69.99,2,Black,Elastic,Bike Fashion,womens_mountain_shorts
-710,23,"Mountain Bike Socks, L",NULL,L,NULL,3.3963,9.5,1,White,Cotton,Bike Fashion,mountain_bike_socks
-709,23,"Mountain Bike Socks, M",NULL,M,NULL,3.3963,9.5,0,White,Cotton,Bike Fashion,mountain_bike_socks
-875,23,"Racing Socks, L",NULL,L,NULL,3.3623,8.99,2,White,Cotton,Bike Fashion,racing_socks
-874,23,"Racing Socks, M",NULL,M,NULL,3.3623,8.99,7,White,Cotton,Bike Fashion,racing_socks
-854,24,"Women's Tights, L",NULL,L,NULL,30.9334,74.99,3,Black,Nylon,Bike Fashion,womens_tights
-853,24,"Women's Tights, M",NULL,M,NULL,30.9334,74.99,0,Black,Nylon,Bike Fashion,womens_tights
-852,24,"Women's Tights, S",NULL,S,NULL,30.9334,74.99,7,Black,Nylon,Bike Fashion,womens_tights
-866,25,"Classic Vest, L",NULL,L,NULL,23.749,63.5,3,Blue,Leather,Bike Fashion,classic_vest
-865,25,"Classic Vest, M",NULL,M,NULL,23.749,63.5,0,Blue,Leather,Bike Fashion,classic_vest
-864,25,"Classic Vest, S",NULL,S,NULL,23.749,63.5,4,Blue,Leather,Bike Fashion,classic_vest
-876,26,Hitch Rack - 4-Bike,80,cm ,4.5,44.88,120,5,Green,Plastic,Miranda,hitch_rack_bike
-879,27,All-Purpose Bike Stand,65,cm ,1.2,59.466,159,1,Blue,Plastic,Kellys,all_purpose_bike_stand
-871,28,Mountain Bottle Cage,21,cm ,0.094,3.7363,9.99,2,Black,Plastic,Jitensha Value,mountain_bottle_cage
-872,28,Road Bottle Cage,24,cm ,0.084,3.3623,8.99,2,White,Plastic,Jitensha Value,road_bottle_cage
-870,28,Water Bottle - 30 oz.,37,cm ,0.12,1.8663,4.99,1,Clear,Plastic,Jitensha Value,water_bottle_oz
-877,29,Bike Wash - Dissolver,NULL,NULL,0.5,2.9733,7.95,3,Clear,Other,Jitensha Value,bike_wash_dissolver
-878,30,Fender Set - Mountain,89,cm ,0.12,8.2205,21.98,5,Red,Plastic,Cube,fender_set_mountain
-708,31,"Cube Breakneck, Black",28,cm ,0.289,13.0863,34.99,1,Black,Glass fibre,Cube,cube_breakneck_black
-711,31,"Cube Breakneck, Blue",30,cm ,0.289,13.0863,34.99,5,Blue,Glass fibre,Cube,cube_breakneck_blue
-707,31,"Cube Breakneck, Red",31,cm ,0.341,13.0863,34.99,7,Red,Glass fibre,Cube,cube_breakneck_red
-847,33,Headlights - Dual-Beam,NULL,NULL,0.05,14.4334,34.99,1,White,Plastic,Ello,headlights_dual_beam
-848,33,Headlights - Weatherproof,NULL,NULL,0.06,18.5584,44.99,0,Blue,Plastic,Conway,headlights_weatherproof
-846,33,Taillights - Battery-Powered,NULL,NULL,0.091,5.7709,13.99,6,Red,Plastic,Ello,taillights_battery_powered
-843,34,Cable Lock,90,cm ,0.34,10.3125,25,3,Purple,Steel,Ello,cable_lock
-842,35,"Touring-Panniers, Large",80,cm ,0.8,51.5625,125,3,Grey,Leather,Ello,touring_panniers_large
-844,36,Minipump,30,cm ,0.24,8.2459,19.99,2,Purple,Plastic,Conway,minipump
-845,36,Mountain Pump,54,cm ,0.6,10.3084,24.99,4,Brown,Aluminium,Cube,mountain_pump
-930,37,Kross Me,32,mm,0.1,13.09,35,1,Black,Rubber,Kross,kross_me
-933,37,Kross You,13,mm,0.1,12.1924,32.6,1,Black,Rubber,Kross,kross_you
-928,37,Kellys Uphill,34,mm,0.1,9.3463,24.99,4,Black,Rubber,Kellys,kellys_uphill
-931,37,Kellys Highway,17,mm,0.1,8.0373,21.49,0,Black,Rubber,Kellys,kellys_highway
-929,37,Kellys Downhill,35,mm,0.1,11.2163,29.99,1,Black,Rubber,Kellys,kellys_downhill
-932,37,Kellys Yourway,16,mm,0.1,9.3463,24.99,5,Black,Rubber,Kellys,kellys_yourway
-921,37,Mountain Tire Tube,200,cm ,0.09,1.8663,4.99,1,Black,Rubber,Kellys,mountain_tire_tube
-873,37,Patch Kit/8 Patches,80,mm,NULL,0.8565,2.29,0,Black,Synthetic,Jitensha Value,patch_kit_8_patches
-922,37,Road Tire Tube,200,cm ,0.06,1.4923,3.99,5,Black,Rubber,Kross,road_tire_tube
-934,37,Touring Tire,26,mm,0.12,10.8423,28.99,2,Black,Rubber,Kross,touring_tire
-923,37,Touring Tire Tube,200,cm ,0.075,1.8663,4.99,5,Black,Rubber,Kross,touring_tire_tube
+815,17,Michelin Mountain Star,622,mm,1.2,26.9708,60.745,4,Black,Steel,Michelin,wheel_mountain_1
+816,17,Michelin Mountain Constellation,584,mm,0.905,92.8071,209.025,4,Black,Aluminium,Michelin,wheel_mountain_2
+817,17,Michelin Mountain Galaxy,559,mm,0.85,133.2955,300.215,2,Black,Aluminium,Michelin,wheel_mountain_3
+818,17,Michelin Road Star,622,mm,0.9,37.9909,85.565,2,Black,Steel,Michelin,wheel_road_1
+819,17,Michelin Road Constellation,584,mm,0.85,110.2829,248.385,1,Black,Aluminium,Michelin,wheel_road_2
+820,17,Michelin Road Galaxy,559,mm,0.65,146.5466,330.06,1,Black,Aluminium,Michelin,wheel_road_3
+821,17,Touring Front Wheel,584,mm,1.23,96.7964,218.01,0,Black,Aluminium,Michelin,wheel_touring_1
+857,18,"Men's Bib-Shorts, L",NULL,L,NULL,37.1209,89.99,2,Multi,Elastic,Bike Fashion,apparel_shorts_1
+856,18,"Men's Bib-Shorts, M",NULL,M,NULL,37.1209,89.99,3,Multi,Elastic,Bike Fashion,apparel_shorts_1
+855,18,"Men's Bib-Shorts, S",NULL,S,NULL,37.1209,89.99,5,Multi,Elastic,Bike Fashion,apparel_shorts_1
+712,19,AWC Logo Cap,NULL,M,NULL,6.9223,8.99,0,Multi,Polyester,Bike Fashion,apparel_cap_1
+863,20,"Full-Finger Gloves, L",NULL,L,NULL,15.6709,37.99,2,Black,Polyester,Bike Fashion,apparel_gloves_full_1
+862,20,"Full-Finger Gloves, M",NULL,M,NULL,15.6709,37.99,5,Black,Polyester,Bike Fashion,apparel_gloves_full_1
+861,20,"Full-Finger Gloves, S",NULL,S,NULL,15.6709,37.99,2,Black,Polyester,Bike Fashion,apparel_gloves_full_1
+860,20,"Half-Finger Gloves, L",NULL,L,NULL,9.1593,24.49,4,Black,Polyester,Bike Fashion,apparel_gloves_half_2
+859,20,"Half-Finger Gloves, M",NULL,M,NULL,9.1593,24.49,0,Black,Polyester,Bike Fashion,apparel_gloves_half_2
+858,20,"Half-Finger Gloves, S",NULL,S,NULL,9.1593,24.49,0,Black,Polyester,Bike Fashion,apparel_gloves_half_2
+715,21,"Long-Sleeve Logo Jersey, L",NULL,L,NULL,38.4923,49.99,3,Multi,Cotton,Bike Fashion,apparel_jersey_long_1
+714,21,"Long-Sleeve Logo Jersey, M",NULL,M,NULL,38.4923,49.99,1,Multi,Cotton,Bike Fashion,apparel_jersey_long_1
+713,21,"Long-Sleeve Logo Jersey, S",NULL,S,NULL,38.4923,49.99,1,Multi,Cotton,Bike Fashion,apparel_jersey_long_1
+716,21,"Long-Sleeve Logo Jersey, XL",NULL,XL,NULL,38.4923,49.99,1,Multi,Cotton,Bike Fashion,apparel_jersey_long_1
+883,21,"Short-Sleeve Classic Jersey, L",NULL,L,NULL,41.5723,53.99,5,Yellow,Cotton,Bike Fashion,apparel_jersey_short_1
+882,21,"Short-Sleeve Classic Jersey, M",NULL,M,NULL,41.5723,53.99,3,Yellow,Cotton,Bike Fashion,apparel_jersey_short_1
+881,21,"Short-Sleeve Classic Jersey, S",NULL,S,NULL,41.5723,53.99,3,Yellow,Cotton,Bike Fashion,apparel_jersey_short_1
+884,21,"Short-Sleeve Classic Jersey, XL",NULL,XL,NULL,41.5723,53.99,7,Yellow,Cotton,Bike Fashion,apparel_jersey_short_1
+850,22,"Men's Sports Shorts, L",NULL,L,NULL,24.7459,59.99,0,Black,Polyester,Bike Fashion,apparel_shorts_2
+849,22,"Men's Sports Shorts, M",NULL,M,NULL,24.7459,59.99,1,Black,Polyester,Bike Fashion,apparel_shorts_2
+841,22,"Men's Sports Shorts, S",NULL,S,NULL,24.7459,59.99,3,Black,Polyester,Bike Fashion,apparel_shorts_2
+851,22,"Men's Sports Shorts, XL",NULL,XL,NULL,24.7459,59.99,1,Black,Polyester,Bike Fashion,apparel_shorts_2
+869,22,"Women's Mountain Shorts, L",NULL,L,NULL,26.1763,69.99,2,Black,Elastic,Bike Fashion,apparel_shorts_3
+868,22,"Women's Mountain Shorts, M",NULL,M,NULL,26.1763,69.99,2,Black,Elastic,Bike Fashion,apparel_shorts_3
+867,22,"Women's Mountain Shorts, S",NULL,S,NULL,26.1763,69.99,2,Black,Elastic,Bike Fashion,apparel_shorts_3
+710,23,"Mountain Bike Socks, L",NULL,L,NULL,3.3963,9.5,1,White,Cotton,Bike Fashion,apparel_socks_1
+709,23,"Mountain Bike Socks, M",NULL,M,NULL,3.3963,9.5,0,White,Cotton,Bike Fashion,apparel_socks_1
+875,23,"Racing Socks, L",NULL,L,NULL,3.3623,8.99,2,White,Cotton,Bike Fashion,apparel_socks_2
+874,23,"Racing Socks, M",NULL,M,NULL,3.3623,8.99,7,White,Cotton,Bike Fashion,apparel_socks_2
+854,24,"Women's Tights, L",NULL,L,NULL,30.9334,74.99,3,Black,Nylon,Bike Fashion,apparel_tights_1
+853,24,"Women's Tights, M",NULL,M,NULL,30.9334,74.99,0,Black,Nylon,Bike Fashion,apparel_tights_1
+852,24,"Women's Tights, S",NULL,S,NULL,30.9334,74.99,7,Black,Nylon,Bike Fashion,apparel_tights_1
+866,25,"Classic Vest, L",NULL,L,NULL,23.749,63.5,3,Blue,Leather,Bike Fashion,apparel_vest_1
+865,25,"Classic Vest, M",NULL,M,NULL,23.749,63.5,0,Blue,Leather,Bike Fashion,apparel_vest_1
+864,25,"Classic Vest, S",NULL,S,NULL,23.749,63.5,4,Blue,Leather,Bike Fashion,apparel_vest_1
+876,26,Hitch Rack - 4-Bike,80,cm ,4.5,44.88,120,5,Green,Plastic,Miranda,accessory_bike_rack_1
+879,27,All-Purpose Bike Stand,65,cm ,1.2,59.466,159,1,Blue,Plastic,Kellys,accessory_bike_stand_1
+871,28,Mountain Bottle Cage,21,cm ,0.094,3.7363,9.99,2,Black,Plastic,Jitensha Value,accessory_bottle_cage_1
+872,28,Road Bottle Cage,24,cm ,0.084,3.3623,8.99,2,White,Plastic,Jitensha Value,accessory_bottle_cage_2
+870,28,Water Bottle - 30 oz.,37,cm ,0.12,1.8663,4.99,1,Clear,Plastic,Jitensha Value,accessory_bottle_1
+877,29,Bike Wash - Dissolver,NULL,NULL,0.5,2.9733,7.95,3,Clear,Other,Jitensha Value,accessory_bike_wash_1
+878,30,Fender Set - Mountain,89,cm ,0.12,8.2205,21.98,5,Red,Plastic,Cube,accessory_fenders_1
+708,31,"Cube Breakneck, Black",28,cm ,0.289,13.0863,34.99,1,Black,Glass fibre,Cube,accessory_helmet_1_black
+711,31,"Cube Breakneck, Blue",30,cm ,0.289,13.0863,34.99,5,Blue,Glass fibre,Cube,accessory_helmet_1_blue
+707,31,"Cube Breakneck, Red",31,cm ,0.341,13.0863,34.99,7,Red,Glass fibre,Cube,accessory_helmet_1_red
+847,33,Headlights - Dual-Beam,NULL,NULL,0.05,14.4334,34.99,1,White,Plastic,Ello,accessory_headlights_1
+848,33,Headlights - Weatherproof,NULL,NULL,0.06,18.5584,44.99,0,Blue,Plastic,Conway,accessory_headlights_2
+846,33,Taillights - Battery-Powered,NULL,NULL,0.091,5.7709,13.99,6,Red,Plastic,Ello,accessory_taillights_1
+843,34,Cable Lock,90,cm ,0.34,10.3125,25,3,Purple,Steel,Ello,accessory_cable_lock
+842,35,"Touring-Panniers, Large",80,cm ,0.8,51.5625,125,3,Grey,Leather,Ello,accessory_bags_1
+844,36,Minipump,30,cm ,0.24,8.2459,19.99,2,Purple,Plastic,Conway,accessory_pump_1
+845,36,Mountain Pump,54,cm ,0.6,10.3084,24.99,4,Brown,Aluminium,Cube,accessory_pump_2
+930,37,Kross Me,32,mm,0.1,13.09,35,1,Black,Rubber,Kross,accessory_tires_1
+933,37,Kross You,13,mm,0.1,12.1924,32.6,1,Black,Rubber,Kross,accessory_tires_1
+928,37,Kellys Uphill,34,mm,0.1,9.3463,24.99,4,Black,Rubber,Kellys,accessory_tires_1
+931,37,Kellys Highway,17,mm,0.1,8.0373,21.49,0,Black,Rubber,Kellys,accessory_tires_1
+929,37,Kellys Downhill,35,mm,0.1,11.2163,29.99,1,Black,Rubber,Kellys,accessory_tires_1
+932,37,Kellys Yourway,16,mm,0.1,9.3463,24.99,5,Black,Rubber,Kellys,accessory_tires_1
+921,37,Mountain Tire Tube,200,cm ,0.09,1.8663,4.99,1,Black,Rubber,Kellys,accessory_tires_1
+873,37,Patch Kit/8 Patches,80,mm,NULL,0.8565,2.29,0,Black,Synthetic,Jitensha Value,accessory_tires_1
+922,37,Road Tire Tube,200,cm ,0.06,1.4923,3.99,5,Black,Rubber,Kross,accessory_tires_1
+934,37,Touring Tire,26,mm,0.12,10.8423,28.99,2,Black,Rubber,Kross,accessory_tires_1
+923,37,Touring Tire Tube,200,cm ,0.075,1.8663,4.99,5,Black,Rubber,Kross,accessory_tires_1
