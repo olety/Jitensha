@@ -1,5 +1,6 @@
 package models;
 
+import io.ebean.Finder;
 import play.data.format.*;
 import play.data.validation.*;
 
@@ -11,6 +12,7 @@ import java.math.BigDecimal;
 public class Product extends BaseModel {
 
     private static final long serialVersionUID = 1L;
+    public static final Finder<Long, Product> find = new Finder<>(Product.class);
 
     @Constraints.Required
     private long subcategoryID;
@@ -42,6 +44,7 @@ public class Product extends BaseModel {
         this.material = material;
         this.manufacturer = manufacturer;
     }
+
 
     @Override
     public boolean equals(Object o) {
