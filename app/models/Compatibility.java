@@ -12,9 +12,11 @@ public class Compatibility extends BaseModel {
     private static final long serialVersionUID = 1L;
     
     @Constraints.Required
+	@Column (name="BikeProductId")
     private long bikeProductID;
 
     @Constraints.Required
+	@Column (name="ComponentProductId")
     private long componentProductID;
 
     public Compatibility(long bikeProductID, long componentProductID) {

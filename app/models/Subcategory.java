@@ -14,6 +14,7 @@ public class Subcategory extends BaseModel {
     public static final Finder<Long, Subcategory> find = new Finder<>(Subcategory.class);
 
     @Constraints.Required
+    @Column(name = "CategoryId")
     private long categoryID;
 
     @Constraints.Required
@@ -48,15 +49,13 @@ public class Subcategory extends BaseModel {
 
         Subcategory that = (Subcategory) o;
 
-        if (getCategoryID() != null ? !getCategoryID().equals(that.getCategoryID()) : that.getCategoryID() != null)
-            return false;
+        if (getCategoryID() != that.getCategoryID()) return false;
         return getName() != null ? getName().equals(that.getName()) : that.getName() == null;
     }
 
     @Override
     public int hashCode() {
-        int result = super.hashCode();
-        result = 31 * result + (getCategoryID() != null ? getCategoryID().hashCode() : 0);
+        int result = (int) (getCategoryID() ^ (getCategoryID() >>> 32));
         result = 31 * result + (getName() != null ? getName().hashCode() : 0);
         return result;
     }
@@ -69,6 +68,7 @@ public class Subcategory extends BaseModel {
                 ", name='" + name + '\'' +
                 '}';
     }
+
     public static Subcategory findById(long id) {
         return find.query()
                 .where()

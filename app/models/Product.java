@@ -1,11 +1,9 @@
 package models;
 
 import io.ebean.Finder;
-import play.data.format.*;
 import play.data.validation.*;
 
 import javax.persistence.*;
-import java.util.*;
 import java.math.BigDecimal;
 
 @Entity
@@ -15,12 +13,14 @@ public class Product extends BaseModel {
     public static final Finder<Long, Product> find = new Finder<>(Product.class);
 
     @Constraints.Required
+    @Column(name = "SubcategoryId")
     private long subcategoryID;
 
     @Constraints.Required
     private String name;
 
     private BigDecimal size;
+    @Column(name = "SizeUnit")
     private String sizeUnit;
     private BigDecimal weight;
     private BigDecimal cost;
@@ -29,9 +29,11 @@ public class Product extends BaseModel {
     private String color;
     private String material;
     private String manufacturer;
+    private String photo;
 
     public Product(long subcategoryID, String name, BigDecimal size, String sizeUnit,
-                   BigDecimal weight, BigDecimal cost, BigDecimal price, int stock, String color, String material, String manufacturer) {
+                   BigDecimal weight, BigDecimal cost, BigDecimal price, int stock, String color,
+                   String material, String manufacturer, String photo) {
         this.subcategoryID = subcategoryID;
         this.name = name;
         this.size = size;
@@ -43,6 +45,7 @@ public class Product extends BaseModel {
         this.color = color;
         this.material = material;
         this.manufacturer = manufacturer;
+        this.photo = photo;
     }
 
 
@@ -64,13 +67,14 @@ public class Product extends BaseModel {
         if (price != null ? !price.equals(product.price) : product.price != null) return false;
         if (color != null ? !color.equals(product.color) : product.color != null) return false;
         if (material != null ? !material.equals(product.material) : product.material != null) return false;
-        return manufacturer != null ? manufacturer.equals(product.manufacturer) : product.manufacturer == null;
+        if (manufacturer != null ? !manufacturer.equals(product.manufacturer) : product.manufacturer != null)
+            return false;
+        return photo != null ? photo.equals(product.photo) : product.photo == null;
     }
 
     @Override
     public int hashCode() {
-        int result = super.hashCode();
-        result = 31 * result + (int) (subcategoryID ^ (subcategoryID >>> 32));
+        int result = (int) (subcategoryID ^ (subcategoryID >>> 32));
         result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + (size != null ? size.hashCode() : 0);
         result = 31 * result + (sizeUnit != null ? sizeUnit.hashCode() : 0);
@@ -81,6 +85,7 @@ public class Product extends BaseModel {
         result = 31 * result + (color != null ? color.hashCode() : 0);
         result = 31 * result + (material != null ? material.hashCode() : 0);
         result = 31 * result + (manufacturer != null ? manufacturer.hashCode() : 0);
+        result = 31 * result + (photo != null ? photo.hashCode() : 0);
         return result;
     }
 
@@ -172,6 +177,14 @@ public class Product extends BaseModel {
         this.manufacturer = manufacturer;
     }
 
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
+    }
+
     @Override
     public String toString() {
         return "Product{" +
@@ -187,6 +200,8 @@ public class Product extends BaseModel {
                 ", color='" + color + '\'' +
                 ", material='" + material + '\'' +
                 ", manufacturer='" + manufacturer + '\'' +
+                ", photo='" + photo + '\'' +
                 '}';
     }
+
 }
