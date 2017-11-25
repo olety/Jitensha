@@ -1,0 +1,23 @@
+-- Auto increment ids
+
+# --- !Ups
+CREATE SEQUENCE CategoryIDSeq;
+CREATE SEQUENCE SubcategoryIDSeq;
+CREATE SEQUENCE ProductIDSeq;
+CREATE SEQUENCE UserIDSeq;
+
+ALTER TABLE Categories ALTER ID SET DEFAULT nextval('CategoryIDSeq');
+ALTER TABLE Subcategories ALTER ID SET DEFAULT nextval('SubcategoryIDSeq');
+ALTER TABLE Products ALTER ID SET DEFAULT nextval('ProductIDSeq');
+ALTER TABLE Users ALTER ID SET DEFAULT nextval('UserIDSeq');
+
+# --- !Downs
+ALTER TABLE Categories ALTER ID DROP DEFAULT;
+ALTER TABLE Subcategories ALTER ID DROP DEFAULT;
+ALTER TABLE Products ALTER ID DROP DEFAULT;
+ALTER TABLE Users ALTER ID DROP DEFAULT;
+
+DROP SEQUENCE CategoryIDSeq;
+DROP SEQUENCE SubcategoryIDSeq;
+DROP SEQUENCE ProductIDSeq;
+DROP SEQUENCE UserIDSeq;
