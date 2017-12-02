@@ -1,12 +1,37 @@
 package controllers;
 
-import play.*;
-import play.data.validation.Constraints;
-import play.mvc.*;
+import io.ebean.Expression;
+import models.Category;
+import models.Product;
+import models.Subcategory;
+import play.Logger;
+import play.mvc.Result;
+import views.html.productList;
 
-import play.data.*;
-import views.html.*;
-import models.*;
+
+import java.util.HashMap;
+import java.util.Set;
+
+import static play.mvc.Results.ok;
 
 public class ProductListController {
+
+    public Result getProductList(String categoryName) {
+        HashMap<String, Object> filterMap = new HashMap<>();
+        Category cat = Category.findByName(categoryName);
+        filterMap.put("Subcategories", cat.getSubcategories());
+        filterMap.put("Color", cat.getColorSet());
+        filterMap.put("Manufacturer", cat.getManufacturerSet());
+        filterMap.put("Material", cat.getMaterialSet());
+        filterMap.put("Price", cat.getPriceSet());
+        Logger.info("filterMap {}", filterMap);
+        return ok(
+                productList.render(
+                        filterMap,
+                        Product.find.all()
+                )
+        );
+    }
+
+
 }
