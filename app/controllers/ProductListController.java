@@ -14,7 +14,7 @@ import static play.mvc.Results.ok;
 
 public class ProductListController {
 
-    public Result getProductList(String categoryName) {
+    public Result getProductList(String categoryName, int page) {
         HashMap<String, List<String>> filterMap = new HashMap<>();
         Category cat = Category.findByName(categoryName);
         filterMap.put("Subcategories", cat.getSubcategoriesNames());
@@ -26,7 +26,7 @@ public class ProductListController {
         return ok(
                 productList.render(
                         filterMap,
-                        Product.find.all(),
+                        Product.find.all().subList(page, page+16),
                         categoryName
                 )
         );
