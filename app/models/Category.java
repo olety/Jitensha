@@ -53,7 +53,7 @@ public class Category extends BaseModel {
                 .collect(Collectors.toList());
     }
 
-    public List<String> getMaterialSet(){
+    public List<String> getMaterialList(){
         return this.getSubcategories()
                 .stream()
                 .map(sb -> Product.find.query().where().eq("subcategoryID", sb.id).findList())
@@ -63,7 +63,7 @@ public class Category extends BaseModel {
                 .collect(Collectors.toList());
     }
 
-    public List<String> getManufacturerSet(){
+    public List<String> getManufacturerList(){
         return this.getSubcategories()
                 .stream()
                 .map(sb -> Product.find.query().where().eq("subcategoryID", sb.id).findList())
@@ -73,7 +73,7 @@ public class Category extends BaseModel {
                 .collect(Collectors.toList());
     }
 
-    public List<String> getPriceSet(){
+    public List<String> getPriceList(){
         return this.getSubcategories()
                 .stream()
                 .map(sb -> Product.find.query().where().eq("subcategoryID", sb.id).findList())
@@ -83,7 +83,7 @@ public class Category extends BaseModel {
                 .collect(Collectors.toList());
     }
 
-    public List<String> getColorSet(){
+    public List<String> getColorList(){
         return this.getSubcategories()
                 .stream()
                 .map(sb -> Product.find.query().where().eq("subcategoryID", sb.id).findList())

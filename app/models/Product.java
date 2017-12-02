@@ -8,6 +8,7 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 
 @Entity
 @Table(name="products")
@@ -51,7 +52,6 @@ public class Product extends BaseModel {
         this.manufacturer = manufacturer;
         this.photo = photo;
     }
-
 
     @Override
     public boolean equals(Object o) {
