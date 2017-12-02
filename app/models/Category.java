@@ -9,6 +9,7 @@ import javax.persistence.*;
 import java.lang.reflect.Array;
 import java.math.BigDecimal;
 import java.util.*;
+import java.util.stream.Collectors;
 
 @Entity
 @Table(name = "categories")
@@ -45,44 +46,51 @@ public class Category extends BaseModel {
         return subcategoryList;
     }
 
-    public HashSet<String> getMaterialSet(){
-        HashSet<String> returnSet = new HashSet<>();
-        for (Subcategory sb: this.getSubcategories()) {
-            for (Product product : Product.find.query().where().eq("subcategoryID", sb.id).findList()) {
-                returnSet.add(product.getMaterial());
-            }
-        }
-        return returnSet;
+    public List<String> getSubcategoriesNames() {
+        return Subcategory.find.query().where().eq("categoryID", this.id).findList()
+                .stream()
+                .map(Subcategory::getName)
+                .collect(Collectors.toList());
     }
 
-    public HashSet<String> getManufacturerSet(){
-        HashSet<String> returnSet = new HashSet<>();
-        for (Subcategory sb: this.getSubcategories()) {
-            for (Product product : Product.find.query().where().eq("subcategoryID", sb.id).findList()) {
-                returnSet.add(product.getManufacturer());
-            }
-        }
-        return returnSet;
+    public List<String> getMaterialSet(){
+        return this.getSubcategories()
+                .stream()
+                .map(sb -> Product.find.query().where().eq("subcategoryID", sb.id).findList())
+                .flatMap(List::stream)
+                .map(Product::getMaterial)
+                .distinct()
+                .collect(Collectors.toList());
     }
 
-    public HashSet<BigDecimal> getPriceSet(){
-        HashSet<BigDecimal> returnSet = new HashSet<>();
-        for (Subcategory sb: this.getSubcategories()) {
-            for (Product product : Product.find.query().where().eq("subcategoryID", sb.id).findList()) {
-                returnSet.add(product.getPrice());
-            }
-        }
-        return returnSet;
+    public List<String> getManufacturerSet(){
+        return this.getSubcategories()
+                .stream()
+                .map(sb -> Product.find.query().where().eq("subcategoryID", sb.id).findList())
+                .flatMap(List::stream)
+                .map(Product::getManufacturer)
+                .distinct()
+                .collect(Collectors.toList());
     }
 
-    public HashSet<String> getColorSet(){
-        HashSet<String> returnSet = new HashSet<>();
-        for (Subcategory sb: this.getSubcategories()) {
-            for (Product product : Product.find.query().where().eq("subcategoryID", sb.id).findList()) {
-                returnSet.add(product.getColor());
-            }
-        }
-        return returnSet;
+    public List<String> getPriceSet(){
+        return this.getSubcategories()
+                .stream()
+                .map(sb -> Product.find.query().where().eq("subcategoryID", sb.id).findList())
+                .flatMap(List::stream)
+                .map(prod -> prod.getPrice().toString())
+                .distinct()
+                .collect(Collectors.toList());
+    }
+
+    public List<String> getColorSet(){
+        return this.getSubcategories()
+                .stream()
+                .map(sb -> Product.find.query().where().eq("subcategoryID", sb.id).findList())
+                .flatMap(List::stream)
+                .map(Product::getColor)
+                .distinct()
+                .collect(Collectors.toList());
     }
 
     @Override

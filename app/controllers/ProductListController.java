@@ -10,16 +10,18 @@ import views.html.productList;
 
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import static play.mvc.Results.ok;
 
 public class ProductListController {
 
     public Result getProductList(String categoryName) {
-        HashMap<String, Object> filterMap = new HashMap<>();
+        HashMap<String, List<String>> filterMap = new HashMap<>();
         Category cat = Category.findByName(categoryName);
-        filterMap.put("Subcategories", cat.getSubcategories());
+        filterMap.put("Subcategories", cat.getSubcategoriesNames());
         filterMap.put("Color", cat.getColorSet());
         filterMap.put("Manufacturer", cat.getManufacturerSet());
         filterMap.put("Material", cat.getMaterialSet());
@@ -28,7 +30,8 @@ public class ProductListController {
         return ok(
                 productList.render(
                         filterMap,
-                        Product.find.all()
+                        Product.find.all(),
+                        categoryName
                 )
         );
     }
