@@ -1,5 +1,5 @@
 @(filterMap: HashMap[String, List[String]], productList: List[Product], categoryName: String)
-@main("Welcome to Play") {
+@main("JITENSHA") {
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">JITENSHA</a>
@@ -69,109 +69,31 @@
     <div class="row">
         <div class="col-md-2">
             <div class="mt-5" id="accordion" role="tablist" aria-multiselectable="true">
-                <div class="card">
-                    <div class="card-header" role="tab" id="headingOne">
-                        <h5 class="mb-0">
-                            <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Size
-                            </a>
-                        </h5>
-                    </div>
+                @for((name, values) <- filterMap) {
+                    <div class="card">
+                        <div class="card-header" role="tab" id="heading@name">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" href="#collapse@name" aria-expanded="true" aria-controls="collapse@name">
+                                    @name
+                                </a>
+                            </h5>
+                        </div>
 
-                    <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
-                        <div class="card-block">
-                            <div class="row">
-                                <div class="col">
-                                    <label class="form-check-label">
-                                        <input class="form-check-input" type="checkbox"> Check me out
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <label class="form-check-label">
-                                        <input class="form-check-input" type="checkbox"> Check me out
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <label class="form-check-label">
-                                        <input class="form-check-input" type="checkbox"> Check me out
-                                    </label>
-                                </div>
+                        <div id="collapse@name" class="collapse show" role="tabpanel" aria-labelledby="heading@name">
+                            <div class="card-block">
+                                @for(value <- values) {
+                                    <div class="row">
+                                        <div class="col">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="checkbox"> @value
+                                            </label>
+                                        </div>
+                                    </div>
+                                }
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" role="tab" id="headingTwo">
-                        <h5 class="mb-0">
-                            <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Wheels
-                            </a>
-                        </h5>
-                    </div>
-                    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
-                        <div class="card-block">
-                            <div class="row">
-                                <div class="col">
-                                    <label class="form-check-label">
-                                        <input class="form-check-input" type="checkbox"> Check me out
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <label class="form-check-label">
-                                        <input class="form-check-input" type="checkbox"> Check me out
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <label class="form-check-label">
-                                        <input class="form-check-input" type="checkbox"> Check me out
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" role="tab" id="headingThree">
-                        <h5 class="mb-0">
-                            <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Manufacturer
-                            </a>
-                        </h5>
-                    </div>
-                    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
-                        <div class="card-block">
-                            <div class="row">
-                                <div class="col">
-                                    <label class="form-check-label">
-                                        <input class="form-check-input" type="checkbox"> Check me out
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <label class="form-check-label">
-                                        <input class="form-check-input" type="checkbox"> Check me out
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <label class="form-check-label">
-                                        <input class="form-check-input" type="checkbox"> Check me out
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                }
             </div>
             <button class="btn btn-primary btn-block">FILTER</button>
         </div>
