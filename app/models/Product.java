@@ -6,6 +6,7 @@ import play.data.validation.*;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.HashSet;
 
 @Entity

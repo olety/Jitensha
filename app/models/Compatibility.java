@@ -1,23 +1,47 @@
 package models;
 
+import io.ebean.Finder;
+import io.ebean.Model;
+import play.Logger;
 import play.data.format.*;
 import play.data.validation.*;
 
 import javax.persistence.*;
+import java.lang.reflect.Array;
 import java.util.*;
 
 @Entity
-@Table(name="compatibility")
-public class Compatibility extends BaseModel {
+@Table(name = "compatibility")
+public class Compatibility extends Model {
 
     private static final long serialVersionUID = 1L;
-    
+    public static final Finder<Long, Compatibility> find = new Finder<>(Compatibility.class);
+
+    public static HashSet<Product> getCompatibleProducts(long prodID) {
+        HashSet<Product> compset = new HashSet<Product>();
+        Logger.info("Getting products compatible with {}", prodID);
+        List<Compatibility> compatibilityList = find.query().where().or()
+                .eq("bikeProductID", prodID)
+                .eq("componentProductID", prodID)
+                .findList();
+        Logger.info("Compatibility list: {}", compatibilityList);
+        for (Compatibility comp : compatibilityList) {
+
+            if (comp.bikeProductID == prodID) {
+                compset.add(Product.find.byId(comp.componentProductID));
+            } else {
+                compset.add(Product.find.byId(comp.bikeProductID));
+            }
+        }
+        return compset;
+    }
+
     @Constraints.Required
-	@Column (name="BikeProductId")
+    @Column(name = "BikeProductId")
     private long bikeProductID;
 
     @Constraints.Required
-	@Column (name="ComponentProductId")
+    @Column(name = "ComponentProductId")
     private long componentProductID;
 
     public Compatibility(long bikeProductID, long componentProductID) {
@@ -64,8 +88,7 @@ public class Compatibility extends BaseModel {
     @Override
     public String toString() {
         return "Compatibility{" +
-                "id=" + id +
-                ", bikeProductID=" + bikeProductID +
+                "bikeProductID=" + bikeProductID +
                 ", componentProductID=" + componentProductID +
                 '}';
     }
