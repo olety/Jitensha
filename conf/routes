@@ -10,6 +10,14 @@ GET     /                           controllers.HomeController.index
 GET     /login                      controllers.AuthController.login
 POST    /login                      controllers.AuthController.authenticate
 
+# Products
+GET     /bikes                      controllers.ProductListController.getProductList(categoryName = "Bikes")
+GET     /components                      controllers.ProductListController.getProductList(categoryName = "Components")
+GET     /clothing                      controllers.ProductListController.getProductList(categoryName = "Clothing")
+GET     /accessories                      controllers.ProductListController.getProductList(categoryName = "Accessories")
+#POST    /login                      controllers.AuthController.authenticate
+
+
 #POST     /logout                      controllers.AuthController.logout
 
 GET     /register                      controllers.RegistrationController.getRegistrationForm

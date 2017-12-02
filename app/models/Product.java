@@ -1,12 +1,15 @@
 package models;
 
 import io.ebean.Finder;
+import play.api.Mode;
 import play.data.validation.*;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.HashSet;
 
 @Entity
+@Table(name="products")
 public class Product extends BaseModel {
 
     private static final long serialVersionUID = 1L;
@@ -183,6 +186,14 @@ public class Product extends BaseModel {
 
     public void setPhoto(String photo) {
         this.photo = photo;
+    }
+
+    public Subcategory getSubcategory() {
+        return Subcategory.findById(this.subcategoryID);
+    }
+
+    public Category getCategory() {
+        return this.getSubcategory().getCategory();
     }
 
     @Override

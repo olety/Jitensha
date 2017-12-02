@@ -7,6 +7,7 @@ import javax.persistence.*;
 import java.util.*;
 
 @Entity
+@Table(name="compatibility")
 public class Compatibility extends BaseModel {
 
     private static final long serialVersionUID = 1L;
