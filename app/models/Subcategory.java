@@ -1,13 +1,16 @@
 package models;
 
 import io.ebean.Finder;
+import play.Logger;
 import play.data.format.*;
 import play.data.validation.*;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.*;
 
 @Entity
+@Table(name = "subcategories")
 public class Subcategory extends BaseModel {
 
     private static final long serialVersionUID = 1L;
@@ -20,9 +23,51 @@ public class Subcategory extends BaseModel {
     @Constraints.Required
     private String name;
 
+    public HashSet<String> getColorSet() {
+        HashSet<String> colorSet = new HashSet<>();
+        for (Product product : Product.find.query().where().eq("subcategoryID", this.id).findList()) {
+            colorSet.add(product.getColor());
+        }
+        return colorSet;
+    }
+
+    public HashSet<String> getMaterialSet() {
+        HashSet<String> returnSet = new HashSet<>();
+        for (Product product : Product.find.query().where().eq("subcategoryID", this.id).findList()) {
+            returnSet.add(product.getMaterial());
+        }
+        return returnSet;
+    }
+
+    public HashSet<String> getManufacturerSet() {
+        HashSet<String> returnSet = new HashSet<>();
+        for (Product product : Product.find.query().where().eq("subcategoryID", this.id).findList()) {
+            returnSet.add(product.getManufacturer());
+        }
+        return returnSet;
+    }
+
+    public HashSet<BigDecimal> getPriceSet() {
+        HashSet<BigDecimal> returnSet = new HashSet<>();
+        for (Product product : Product.find.query().where().eq("subcategoryID", this.id).findList()) {
+            returnSet.add(product.getPrice());
+        }
+        return returnSet;
+    }
+
+    public List<Product> getProducts() {
+        List<Product> productList = Product.find.query().where().eq("subcategoryID", this.id).findList();
+        Logger.info("Getting products for '{}': '{}'", this.name, productList);
+        return productList;
+    }
+
     public Subcategory(@Constraints.Required long categoryID, String name) {
         this.categoryID = categoryID;
         this.name = name;
+    }
+
+    public Category getCategory() {
+        return Category.find.query().where().eq("id", this.categoryID).findUnique();
     }
 
     public long getCategoryID() {
