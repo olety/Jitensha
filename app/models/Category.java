@@ -93,6 +93,14 @@ public class Category extends BaseModel {
                 .collect(Collectors.toList());
     }
 
+    public List<Product> getProductList(){
+        return this.getSubcategories()
+                .stream()
+                .map(sb -> Product.find.query().where().eq("subcategoryID", sb.id).findList())
+                .flatMap(List::stream)
+                .collect(Collectors.toList());
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

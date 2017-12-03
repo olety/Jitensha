@@ -18,10 +18,10 @@ GET         /register            controllers.RegistrationController.getRegistrat
 POST        /register            controllers.RegistrationController.register
 
 # Products - view categories
-GET         /bikes               controllers.ProductListController.getProductList(categoryName = "Bikes", page: Integer)
-GET         /components          controllers.ProductListController.getProductList(categoryName = "Components", page: Integer)
-GET         /clothing            controllers.ProductListController.getProductList(categoryName = "Clothing", page: Integer)
-GET         /accessories         controllers.ProductListController.getProductList(categoryName = "Accessories", page: Integer)
+GET         /bikes               controllers.ProductListController.getProductList(categoryName = "Bikes")
+GET         /components          controllers.ProductListController.getProductList(categoryName = "Components")
+GET         /clothing            controllers.ProductListController.getProductList(categoryName = "Clothing")
+GET         /accessories         controllers.ProductListController.getProductList(categoryName = "Accessories")
 
 # Products - details
 GET         /products            controllers.ProductController.getProductList(id: Long)
