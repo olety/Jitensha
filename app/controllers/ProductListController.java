@@ -23,7 +23,7 @@ public class ProductListController {
         filterMap.put("Color", cat.getColorList());
         filterMap.put("Manufacturer", cat.getManufacturerList());
         filterMap.put("Material", cat.getMaterialList());
-        filterMap.put("Price", cat.getPriceList());
+        //filterMap.put("Price", cat.getPriceList());
         Logger.info("filterMap {}", filterMap);
 
         List<Product> plist= cat.getProductList();

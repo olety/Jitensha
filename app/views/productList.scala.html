@@ -102,9 +102,9 @@
             @for((product, i) <- productList.zipWithIndex) {
                 <div id="pcard_@i" class="col-md-3">
                     <div class="card mb-3">
-                        <img class="card-img-top center-cropped" src="@routes.Assets.versioned(s"photos/${product.getPhoto}.jpg")" alt="Card image cap">
+                        <img class="card-img-top center-cropped" src="@routes.Assets.versioned(s"photos/${product.getPhoto}.jpg")" onerror="this.onerror=null; this.src=@routes.Assets.versioned(s"photos/placeholder.jpg");">
                         <div class="card-body">
-                            <h4 class="card-title">@product.getName</h4>
+                            <a href="@routes.ProductController.getProductList(product.getId)"><h4 class="card-title">@product.getName</h4></a>
                             <p class="card-text">@product.getColor @product.getManufacturer @product.getMaterial</p>
                             <a href="#" class="btn btn-primary">Add to cart</a>
                         </div>

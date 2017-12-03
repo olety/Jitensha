@@ -1,55 +1,118 @@
 @(product: Product, compatibleSet: HashSet[Product])
-@main("JITENSHA") {
+    @main("JITENSHA") {
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">JITENSHA</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">JITENSHA</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href='@routes.HomeController.index()'>Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="@routes.ProductListController.getProductList("Bikes")">Bicycles</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="@routes.ProductListController.getProductList("Components")">Components</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="@routes.ProductListController.getProductList("Clothing")">Clothing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="@routes.ProductListController.getProductList("Accessories")">Accessories</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href='@routes.HomeController.index()'>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@routes.ProductListController.getProductList("Bikes")">Bicycles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@routes.ProductListController.getProductList("Components")">
+                            Components</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@routes.ProductListController.getProductList("Clothing")">Clothing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@routes.ProductListController.getProductList("Accessories")">
+                            Accessories</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
 
-                <a class="nav-link p-2" href="@routes.AuthController.login()" rel="noopener" aria-label="Slack">
-                    <i class="fa fa-sign-in" aria-hidden="true"></i>
-                </a>
-                <a class="nav-link p-2" href="@routes.RegistrationController.register()" rel="noopener" aria-label="Slack">
-                    <i class="fa fa-user-o" aria-hidden="true"></i>
-                </a>
-                <a class="nav-link p-2" href="#" target="_blank" rel="noopener" aria-label="Slack">
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                </a>
-            </form>
+                    <a class="nav-link p-2" href="@routes.AuthController.login()" rel="noopener" aria-label="Slack">
+                        <i class="fa fa-sign-in" aria-hidden="true"></i>
+                    </a>
+                    <a class="nav-link p-2" href="@routes.RegistrationController.register()" rel="noopener" aria-label="Slack">
+                        <i class="fa fa-user-o" aria-hidden="true"></i>
+                    </a>
+                    <a class="nav-link p-2" href="#" target="_blank" rel="noopener" aria-label="Slack">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    </a>
+                </form>
+            </div>
+        </nav>
+
+        <div class="row mt-5 ml-5">
+            <div class="col-md-4">
+                <img class="centered" src="@routes.Assets.versioned(s"photos/${product.getPhoto}.jpg")">
+            </div>
+            <div class="col-md-4">
+                <h2>@product.getName</h2>
+                <table class="table">
+                    <tbody>
+                        @if(product.getManufacturer != null) {
+                            <tr>
+                                <td>Manufacturer</td>
+                                <td>@product.getManufacturer</td>
+                            </tr>
+                        }
+                        @if(product.getMaterial != null) {
+                            <tr>
+                                <td>Material</td>
+                                <td>@product.getMaterial</td>
+                            </tr>
+                        }
+                        @if(product.getColor != null) {
+                            <tr>
+                                <td>Color</td>
+                                <td>@product.getColor</td>
+                            </tr>
+                        }
+                        @if(product.getSize != null) {
+                            <tr>
+                                <td>Size</td>
+                                <td>@{
+                                    f"${product.getSize}%1.2f"
+                                } @product.getSizeUnit</td>
+                            </tr>
+                        }
+                        @if(product.getWeight != null) {
+                            <tr>
+                                <td>Weight</td>
+                                <td>@{
+                                    f"${product.getWeight}%1.2f"
+                                } kg.</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <div>
+                    <button class="btn btn-primary">Add to cart</button>
+                </div>
+            </div>
         </div>
-    </nav>
 
-    <h1>Product details (scrollable)</h1>
-    <div class="pre-scrollable">
-    @product
-    </div>
-    <h1>Compatible products (check if has elements)</h1>
-    <div class="pre-scrollable">
-    @compatibleSet
-    </div>
-    <h1>'Add to cart' button</h1>
+        <div class="row">
+            <div class="col-md-3">
+                <h2>Compatible with</h2>
+            </div>
+        </div>
+        <div class="row">
+        @for(product <- compatibleSet) {
+            <div class="col-md-2">
+                <div class="card m-2">
+                    <div class="card-body">
+                        <a href="@routes.ProductController.getProductList(product.getId)">
+                            <img class="card-img-top center-cropped" src="@routes.Assets.versioned(s"photos/${product.getPhoto}.jpg")" onerror="this.onerror = null;
+                            this.src =@routes.Assets.versioned(s"photos/placeholder.jpg");">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+        </div>
 
-    </main> <!-- /.container -->
-}
+
+        </main> <!-- /.container -->
+    }
