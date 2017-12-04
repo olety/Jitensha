@@ -60,7 +60,11 @@
                                 <td>@prod.getName</td>
                                 <td>@prod.getPrice</td>
                                 <td>
-                                    <button onclick="myFunction(@index)" class="btn btn-danger">Remove</button>
+                                    <form name="removeFromCart">
+                                        @helper.CSRF.formField
+                                    <input type="hidden" name="id" value="@prod.getId()" />
+                                    <input type="submit" class="btn btn-danger" value="Remove"/>
+                                    </form>
                                 </td>
                             </tr>
                         }
@@ -88,10 +92,5 @@
         </div>
     </div>
 
-    <script>
-            function myFunction(index) {
-                document.getElementById("cart-table").deleteRow(index + 1);
-            }
-    </script>
 
 }

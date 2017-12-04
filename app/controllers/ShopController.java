@@ -30,7 +30,7 @@ import static play.mvc.Results.redirect;
 public class ShopController {
 
     public Result addToCart(long itemId) {
-        Logger.info("Trying to add {} to card", itemId);
+        Logger.info("Trying to add {} to cart", itemId);
         Logger.info("Session {}", session());
         Optional<String> email = Optional.ofNullable(session().get("email"));
         if (email.isPresent()) {
@@ -49,7 +49,7 @@ public class ShopController {
     }
 
     public Result removeFromCart(long itemId) {
-        Logger.info("Trying to add {} to card", itemId);
+        Logger.info("Trying to remove {} from cart", itemId);
         Logger.info("Session {}", session());
         Optional<String> email = Optional.ofNullable(session().get("email"));
         if (email.isPresent()) {
@@ -119,7 +119,7 @@ public class ShopController {
         Logger.info("Deleting user products...");
 
         Basket.deleteUserProductList(user.get());
-
+        
         return ok(cart.render(Basket.getUserProductList(user.get()), charge));
     }
 
