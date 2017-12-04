@@ -21,6 +21,8 @@ public class Product extends BaseModel {
         return find.query().where().eq("id", id).findOne();
     }
 
+    public static List<Product> findByPartName (String name) { return find.query().where().icontains("name", name).findList();  }
+
     @Constraints.Required
     @Column(name = "SubcategoryId")
     private long subcategoryID;

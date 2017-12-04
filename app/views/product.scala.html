@@ -36,7 +36,7 @@
                     <a class="nav-link p-2" href="@routes.RegistrationController.register()" rel="noopener" aria-label="Slack">
                         <i class="fa fa-user-o" aria-hidden="true"></i>
                     </a>
-                    <a class="nav-link p-2" href="#" target="_blank" rel="noopener" aria-label="Slack">
+                    <a class="nav-link p-2" href="@routes.ShopController.displayCart()" target="_blank" rel="noopener" aria-label="Slack">
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     </a>
                 </form>
@@ -89,7 +89,7 @@
                 </table>
                 <div class="row">
                     <div class="col-md-4">
-                        <a href="#" class="btn btn-primary">Add to cart</a>
+                        <button class="btn btn-primary" onclick="@routes.ShopController.addToCart(product.getId)">Add to cart</button>
                     </div>
                     <div class="col-md-4">
                         <blockquote class="blockquote text-right mt-2">

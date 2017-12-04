@@ -1,5 +1,6 @@
 package controllers;
 
+import io.ebeaninternal.server.lib.util.Str;
 import models.Category;
 import models.Product;
 import play.Logger;
@@ -37,5 +38,20 @@ public class ProductListController {
                 )
         );
     }
+
+    public Result getPruductsListBySearch(String search) {
+
+        List<Product> plist= Product.findByPartName(search);
+        Logger.info("plist {}", plist);
+
+        return ok(
+                productList.render(
+                        null,
+                        plist,
+                        "NONE"
+                )
+        );
+    }
+
 
 }
