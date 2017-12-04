@@ -33,6 +33,10 @@ public class Basket extends Model {
         find.query().where().eq("userID", user.id).delete();
     }
 
+    public static void deleteUserProduct(User user, long productID) {
+        find.query().where().eq("userID", user.id).and().eq("productID", productID).findOne().delete();
+    }
+
 
     @Constraints.Required
     @Column(name="UserID")

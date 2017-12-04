@@ -27,6 +27,7 @@ GET         /accessories         controllers.ProductListController.getProductLis
 GET         /cart                controllers.ShopController.displayCart()
 POST        /cart                controllers.ShopController.buyItems(stripeToken: String, amount: Double)
 POST        /addItem             controllers.ShopController.addToCart(id: Long)
+POST        /removeItem          controllers.ShopController.removeFromCart(id: Long)
 
 
 # Products - details

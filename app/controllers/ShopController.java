@@ -45,6 +45,20 @@ public class ShopController {
         return redirect(controllers.routes.AuthController.login());
     }
 
+    public Result removeFromCart(long itemId) {
+        Logger.info("Trying to add {} to card", itemId);
+        Logger.info("Session {}", session());
+        Optional<String> email = Optional.ofNullable(session().get("email"));
+        if (email.isPresent()) {
+            Optional<User> user = Optional.ofNullable(User.findByEmail(email.get()));
+            if (user.isPresent()){
+                Logger.info("Deleting a product from a cart - user {} itemId {}", user.get(), itemId);
+                Basket.deleteUserProduct(user.get(), itemId);
+            }
+        }
+        return redirect(controllers.routes.AuthController.login());
+    }
+
     public Result displayCart() {
         String email = session().get("email");
         Optional<User> user = Optional.ofNullable(User.findByEmail(email));
