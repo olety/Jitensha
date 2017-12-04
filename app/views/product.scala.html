@@ -87,8 +87,15 @@
                         }
                     </tbody>
                 </table>
-                <div>
-                    <button class="btn btn-primary">Add to cart</button>
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="#" class="btn btn-primary">Add to cart</a>
+                    </div>
+                    <div class="col-md-4">
+                        <blockquote class="blockquote text-right mt-2">
+                            <strong>@{f"${product.getPrice}%1.2f"} $</strong>
+                        </blockquote>
+                    </div>
                 </div>
             </div>
         </div>
@@ -102,10 +109,13 @@
         @for(product <- compatibleSet) {
             <div class="col-md-2">
                 <div class="card m-2">
+                    <a href="@routes.ProductController.getProductList(product.getId)">
+                        <img class="card-img-top center-cropped" src="@routes.Assets.versioned(s"photos/${product.getPhoto}.jpg")" onerror="this.onerror = null;
+                        this.src =@routes.Assets.versioned(s"photos/placeholder.jpg");">
+                    </a>
                     <div class="card-body">
                         <a href="@routes.ProductController.getProductList(product.getId)">
-                            <img class="card-img-top center-cropped" src="@routes.Assets.versioned(s"photos/${product.getPhoto}.jpg")" onerror="this.onerror = null;
-                            this.src =@routes.Assets.versioned(s"photos/placeholder.jpg");">
+                            <h4 class="card-header">@product.getName</h4>
                         </a>
                     </div>
                 </div>

@@ -106,7 +106,16 @@
                         <div class="card-body">
                             <a href="@routes.ProductController.getProductList(product.getId)"><h4 class="card-title">@product.getName</h4></a>
                             <p class="card-text">@product.getColor @product.getManufacturer @product.getMaterial</p>
-                            <a href="#" class="btn btn-primary">Add to cart</a>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <a href="#" class="btn btn-primary">Add to cart</a>
+                                </div>
+                                <div class="col-md-6">
+                                    <blockquote class="blockquote text-right mt-2">
+                                        <strong>@{f"${product.getPrice}%1.2f"} $</strong>
+                                    </blockquote>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
