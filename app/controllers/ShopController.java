@@ -17,6 +17,7 @@ import views.html.login;
 
 import java.math.BigDecimal;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -28,6 +29,8 @@ import static play.mvc.Results.redirect;
 public class ShopController {
 
     public Result addToCart(long itemId) {
+        Logger.info("Trying to add {} to card", itemId);
+        Logger.info("Session {}", session());
         Optional<String> email = Optional.ofNullable(session().get("email"));
         if (email.isPresent()) {
             Optional<User> user = Optional.ofNullable(User.findByEmail(email.get()));
@@ -37,7 +40,6 @@ public class ShopController {
                 bought.setProductID(itemId);
                 Logger.info("Saving a new purchase: {}", bought);
                 bought.save();
-                return null;
             }
         }
         return redirect(controllers.routes.AuthController.login());
@@ -48,7 +50,9 @@ public class ShopController {
         Optional<User> user = Optional.ofNullable(User.findByEmail(email));
 
         if (user.isPresent()) {
-            return ok(cart.render(Basket.getUserProductList(user.get()), null));
+            List<Product> products = Basket.getUserProductList(user.get());
+            Logger.info("Displaying cart to user {}, \nproductList = {}", user.get(), products);
+            return ok(cart.render(products, null));
         }
 
         return badRequest(cart.render(null, null));
