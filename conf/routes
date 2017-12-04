@@ -23,6 +23,11 @@ GET         /components          controllers.ProductListController.getProductLis
 GET         /clothing            controllers.ProductListController.getProductList(categoryName = "Clothing")
 GET         /accessories         controllers.ProductListController.getProductList(categoryName = "Accessories")
 
+GET         /cart                controllers.ShopController.displayCart()
+POST        /cart                controllers.ShopController.buyItems(stripeToken: String, amount: Double)
+POST        /addItem             controllers.ShopController.addToCart(id: Long)
+
+
 # Products - details
 GET         /products            controllers.ProductController.getProductList(id: Long)
 

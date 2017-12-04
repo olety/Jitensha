@@ -56,7 +56,7 @@ public class ShopController {
 
 
     //
-    public Result buyItems(String stripeToken, BigDecimal amount) {
+    public Result buyItems(String stripeToken, double amount) {
         Optional<User> user = Optional.ofNullable(User.findByEmail(session().get("email")));
 
         if (!user.isPresent()) {

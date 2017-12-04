@@ -2,7 +2,7 @@
 @(productList: List[Product], charge: Charge)
 @main("JITENSHA") {
 
-    <form action="/your-server-side-code" method="POST">
+    <form action="/cart" method="POST">
         <script
         src="https://checkout.stripe.com/checkout.js" class="stripe-button"
         data-key="pk_test_JbbzL8C2neTGurk8zcrRYYz7"
@@ -10,7 +10,9 @@
         data-name="Jitensha"
         data-description="Widget"
         data-image="https://i.imgur.com/jEIiWzZ.png"
-        data-locale="auto">
+        data-locale="auto"
+        data-billing-address="true"
+        data-shipping-address="true">
         </script>
     </form>
 }
