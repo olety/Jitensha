@@ -21,6 +21,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+import static play.mvc.Controller.request;
 import static play.mvc.Controller.session;
 import static play.mvc.Results.badRequest;
 import static play.mvc.Results.ok;
@@ -41,8 +42,10 @@ public class ShopController {
                 Logger.info("Saving a new purchase: {}", bought);
                 bought.save();
             }
+            return ok();
+        } else {
+            return redirect(controllers.routes.AuthController.login());
         }
-        return redirect(controllers.routes.AuthController.login());
     }
 
     public Result removeFromCart(long itemId) {
@@ -55,8 +58,10 @@ public class ShopController {
                 Logger.info("Deleting a product from a cart - user {} itemId {}", user.get(), itemId);
                 Basket.deleteUserProduct(user.get(), itemId);
             }
+            return ok();
+        } else {
+            return redirect(controllers.routes.AuthController.login());
         }
-        return redirect(controllers.routes.AuthController.login());
     }
 
     public Result displayCart() {
