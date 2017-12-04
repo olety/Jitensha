@@ -71,10 +71,12 @@ public class ShopController {
         if (user.isPresent()) {
             List<Product> products = Basket.getUserProductList(user.get());
             Logger.info("Displaying cart to user {}, \nproductList = {}", user.get(), products);
-            return ok(cart.render(products, null));
+            double total = products.stream().mapToDouble(p -> p.getPrice().doubleValue()).sum();
+            Logger.info("Returning total price= {}", total);
+            return ok(cart.render(products, null, total));
         }
 
-        return badRequest(cart.render(null, null));
+        return badRequest(cart.render(null, null, null));
     }
 
 
@@ -83,7 +85,7 @@ public class ShopController {
         Optional<User> user = Optional.ofNullable(User.findByEmail(session().get("email")));
 
         if (!user.isPresent()) {
-            return badRequest(cart.render(null, null));
+            return badRequest(cart.render(null, null, null));
         }
 
         Stripe.apiKey = "sk_test_wnR8ArdUozEFO5pw2gjFcguv";
@@ -119,8 +121,8 @@ public class ShopController {
         Logger.info("Deleting user products...");
 
         Basket.deleteUserProductList(user.get());
-        
-        return ok(cart.render(Basket.getUserProductList(user.get()), charge));
+
+        return ok(cart.render(Basket.getUserProductList(user.get()), charge, null));
     }
 
 }
