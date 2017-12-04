@@ -1,0 +1,16 @@
+@import com.stripe.model.Charge
+@(productList: List[Product], charge: Charge)
+@main("JITENSHA") {
+
+    <form action="/your-server-side-code" method="POST">
+        <script
+        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="pk_test_JbbzL8C2neTGurk8zcrRYYz7"
+        data-amount="TUTA $$$"
+        data-name="Jitensha"
+        data-description="Widget"
+        data-image="https://i.imgur.com/jEIiWzZ.png"
+        data-locale="auto">
+        </script>
+    </form>
+}

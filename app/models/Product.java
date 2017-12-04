@@ -17,6 +17,10 @@ public class Product extends BaseModel {
     private static final long serialVersionUID = 1L;
     public static final Finder<Long, Product> find = new Finder<>(Product.class);
 
+    public static Product findProductById (long id) {
+        return find.query().where().eq("id", id).findOne();
+    }
+
     @Constraints.Required
     @Column(name = "SubcategoryId")
     private long subcategoryID;

@@ -11,6 +11,8 @@ libraryDependencies += guice
 // Test Database
 libraryDependencies += "com.h2database" % "h2" % "1.4.194"
 
+libraryDependencies += "com.stripe" % "stripe-java" % "5.24.0"
+
 // Testing libraries for dealing with CompletionStage...
 libraryDependencies += "org.assertj" % "assertj-core" % "3.6.2" % Test
 libraryDependencies += "org.awaitility" % "awaitility" % "2.0.0" % Test
