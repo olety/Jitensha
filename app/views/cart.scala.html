@@ -2,7 +2,7 @@
 @(productList: List[Product], charge: Charge)
 @main("JITENSHA") {
     <div class="col-md-4">
-        <table class="table">
+        <table class="table" id="cart-table">
             <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -17,7 +17,7 @@
                         <td>@prod.getName</td>
                         <td>@prod.getPrice</td>
                         <td>
-                            <button class="btn btn-danger">Remove</button>
+                            <button onclick="myFunction(@index)" class="btn btn-danger">Remove</button>
                         </td>
                     </tr>
                 }
@@ -38,5 +38,11 @@
             </script>
         </form>
     </div>
+
+    <script>
+            function myFunction(index) {
+                document.getElementById("cart-table").deleteRow(index + 1);
+            }
+    </script>
 
 }
