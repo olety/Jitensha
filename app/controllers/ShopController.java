@@ -81,7 +81,7 @@ public class ShopController {
 
 
     //
-    public Result buyItems(String stripeToken, double amount) {
+    public Result buyItems() {
         Optional<User> user = Optional.ofNullable(User.findByEmail(session().get("email")));
 
         if (!user.isPresent()) {
@@ -92,7 +92,12 @@ public class ShopController {
 
         // Token is created using Checkout or Elements!
         // Get the payment token ID submitted by the form:
-        String token = stripeToken;
+        Map<String, String[]> m = request().body().asFormUrlEncoded();
+        Logger.info("m {}", m);
+        String token = m.get("stripeToken")[0];
+        Logger.info("Token {}", token);
+        int amount = (int) Double.parseDouble(m.get("amount")[0]);
+        Logger.info("Amount {}", amount);
 
         // Charge the user's card:
         Map<String, Object> params = new HashMap<>();
