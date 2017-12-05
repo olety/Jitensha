@@ -129,11 +129,13 @@ public class User extends BaseModel {
 
     public static User authenticate(String email, String password) {
         Optional<User> user = Optional.ofNullable(User.findByEmail(email));
-        Logger.info("Retrieved the user nullable {}", user.get());
         Logger.info("isPresent {}", user.isPresent());
-        if (user.isPresent() && true){//&& BCrypt.checkpw(user.get().passwordHash, password)) {
-            Logger.info("User successfully validated {}", user.get());
-            return user.get();
+        if (user.isPresent()) {
+            Logger.info("Retrieved the user nullable {}", user.get());
+            if (password.equals(user.get().getPasswordHash())) {//&& BCrypt.checkpw(user.get().passwordHash, password)) {
+                Logger.info("User successfully validated {}", user.get());
+                return user.get();
+            }
         }
         Logger.info("Couldn't validate the user");
         return null;
