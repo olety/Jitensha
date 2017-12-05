@@ -11,7 +11,9 @@ import views.html.productList;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+import static play.mvc.Controller.request;
 import static play.mvc.Results.ok;
 
 public class ProductListController {
@@ -39,8 +41,10 @@ public class ProductListController {
         );
     }
 
-    public Result getProductsListBySearch(String search) {
-
+    public Result getProductsListBySearch() {
+        Map<String, String[]> m = request().body().asFormUrlEncoded();
+        Logger.info("m {}", m);
+        String search = m.get("search")[0];
         List<Product> plist= Product.findByPartName(search);
         Logger.info("plist {}", plist);
 

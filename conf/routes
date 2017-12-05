@@ -29,7 +29,7 @@ POST        /cart                controllers.ShopController.buyItems()
 POST        /addItem/:id         controllers.ShopController.addToCart(id: Long)
 POST        /removeItem/:id      controllers.ShopController.removeFromCart(id: Long)
 
-GET        /search/:search      controllers.ProductListController.getProductsListBySearch(search: String)
+POST        /search      controllers.ProductListController.getProductsListBySearch()
 # Products - details
 GET         /products            controllers.ProductController.getProductList(id: Long)
 
