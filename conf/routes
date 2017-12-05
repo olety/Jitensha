@@ -3,11 +3,36 @@
 # ~~~~
 
 # An example controller showing a sample home page
-GET     /                           controllers.HomeController.index
+GET         /                    controllers.HomeController.index
 # An example controller showing how to use dependency injection
-GET     /count                      controllers.CountController.count
-# An example controller showing how to write asynchronous code
-GET     /message                    controllers.AsyncController.message
+
+# Auth - login
+GET         /login               controllers.AuthController.login
+POST        /login               controllers.AuthController.authenticate
+
+# Auth - logout
+GET         /logout              controllers.AuthController.logout
+
+# Registration
+GET         /register            controllers.RegistrationController.getRegistrationForm
+POST        /register            controllers.RegistrationController.register
+
+# Products - view categories
+GET         /bikes               controllers.ProductListController.getProductList(categoryName = "Bikes")
+GET         /components          controllers.ProductListController.getProductList(categoryName = "Components")
+GET         /clothing            controllers.ProductListController.getProductList(categoryName = "Clothing")
+GET         /accessories         controllers.ProductListController.getProductList(categoryName = "Accessories")
+
+
+GET         /cart                controllers.ShopController.displayCart()
+POST        /cart                controllers.ShopController.buyItems()
+POST        /addItem/:id         controllers.ShopController.addToCart(id: Long)
+POST        /removeItem/:id      controllers.ShopController.removeFromCart(id: Long)
+
+
+# Products - details
+GET         /products            controllers.ProductController.getProductList(id: Long)
+
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+GET         /assets/*file        controllers.Assets.versioned(path="/public", file: Asset)

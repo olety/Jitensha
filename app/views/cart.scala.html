@@ -1,0 +1,114 @@
+@import com.stripe.model.Charge
+@(productList: List[Product], charge: Charge, total:Double)
+@main("JITENSHA") {
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">JITENSHA</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href='@routes.HomeController.index()'>Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="@routes.ProductListController.getProductList("Bikes")">Bicycles</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="@routes.ProductListController.getProductList("Components")">Components</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="@routes.ProductListController.getProductList("Clothing")">Clothing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="@routes.ProductListController.getProductList("Accessories")">Accessories</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+
+                <a class="nav-link p-2" href="@routes.AuthController.login()" rel="noopener" aria-label="Slack">
+                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                </a>
+                <a class="nav-link p-2" href="@routes.RegistrationController.register()" rel="noopener" aria-label="Slack">
+                    <i class="fa fa-user-o" aria-hidden="true"></i>
+                </a>
+                <a class="nav-link p-2" href="@routes.ShopController.displayCart()" target="_blank" rel="noopener" aria-label="Slack">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </a>
+            </form>
+        </div>
+    </nav>
+    @if(!productList.isEmpty) {
+    <div class="row mt-5">
+        <div class="col-md-4 offset-4">
+            <div class="card">
+                <table class="table" id="cart-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Product</th>
+                            <th scope="col">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @if(productList != null) {
+                        @for((prod, index) <- productList.zipWithIndex) {
+                            <tr>
+                                <td>@index</td>
+                                <td>@prod.getName</td>
+                                <td>@{f"${prod.getPrice}%1.2f"} $</td>
+                                <td>
+                                    <form name="removeFromCart" onclick="setTimeout(window.location.reload(), 100)">
+                                        @helper.CSRF.formField
+                                    <input type="hidden" name="id" value="@prod.getId()" />
+                                    <input type="submit" class="btn btn-danger" value="Remove"/>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                        <tr>
+                            <td></td>
+                            <td><b>Total:</b></td>
+                            <td><b>@{f"${total}%1.2f"} $</b></td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+        <div class="row">
+            <div class="col-md-4 offset-4">
+                <form action="/cart" method="POST">
+                    @helper.CSRF.formField
+                    <script
+                    src="https://checkout.stripe.com/checkout.js" class="stripe-button btn-block"
+                    data-key="pk_test_JbbzL8C2neTGurk8zcrRYYz7"
+                    data-amount="@(total*100.0)"
+                    data-name="Jitensha"
+                    data-description="Widget"
+                    data-image="https://i.imgur.com/jEIiWzZ.png"
+                    data-locale="auto"
+                    data-billing-address="true"
+                    data-shipping-address="true">
+                    </script>
+                    <input type="hidden" name="amount" value="@(total*100.0)" />
+                </form>
+            </div>
+        </div>
+    } else {
+        <div class="row">
+            <div class="col-md-6 offset-3">
+                <div class="alert alert-warning" role="alert">
+                    <strong>Your cart is empty!</strong> Go ahead and buy something!
+                </div>
+            </div>
+        </div>
+    }
+
+
+
+}

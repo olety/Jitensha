@@ -1,0 +1,120 @@
+@(form: Form[RegistrationController.RegistrationForm])
+@main("JITENSHA") {
+    <body>
+    @helper.form(routes.RegistrationController.register) {
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <h1 class="text-center text-primary"><a href='@routes.HomeController.index()' class="nounderline">JITENSHA</a></h1>
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                @*<label for="inputFirstName">First Name</label>*@
+                                <input
+                                    name="firstName"
+                                    type="text"
+                                    class="form-control"
+                                    id="inputFirstName"
+                                    placeholder="First Name"
+                                    value="@form("firstName").value">
+                            </div>
+                            <div class="form-group col-md-6">
+                                @*<label for="inputLastName">Last Name</label>*@
+                                <input
+                                    name="lastName"
+                                    type="text"
+                                    class="form-control"
+                                    id="inputLastName"
+                                    placeholder="Last Name"
+                                    value="@form("lastName").value">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                @*<label for="inputEmail">Email</label>*@
+                                <input
+                                    name="email"
+                                    type="email"
+                                    class="form-control"
+                                    id="inputEmail"
+                                    placeholder="Email"
+                                    value="@form("email").value">
+                            </div>
+                            <div class="form-group col-md-6">
+                                @*<label for="inputPassword">Password</label>*@
+                                <input
+                                    name="password"
+                                    type="password"
+                                    class="form-control"
+                                    id="inputPassword"
+                                    placeholder="Password"
+                                    value="@form("password").value">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-9">
+                                @*<label for="inputAddress">Address</label>*@
+                                <input
+                                    name="address"
+                                    type="text"
+                                    class="form-control"
+                                    id="inputAddress"
+                                    placeholder="Address"
+                                    value="@form("address").value">
+                            </div>
+                            <div class="form-group col-md-3">
+                                @*<label for="inputApartment">Apartment</label>*@
+                                <input
+                                    name="apartment"
+                                    type="text"
+                                    class="form-control"
+                                    id="inputApartment"
+                                    placeholder="Apartment No."
+                                    value="@form("apartment").value">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                @*<label for="inputCountry">Country</label>*@
+                                <input
+                                    name="country"
+                                    type="text"
+                                    class="form-control"
+                                    id="inputCountry"
+                                    placeholder="Country"
+                                    value="@form("country").value">
+                            </div>
+                            <div class="form-group col-md-4">
+                                @*<label for="inputCity">City</label>*@
+                                <input
+                                    name="city"
+                                    type="text"
+                                    class="form-control"
+                                    id="inputCity"
+                                    placeholder="City"
+                                    value="@form("city").value">
+                            </div>
+                            <div class="form-group col-md-2">
+                                @*<label for="inputZip">Zip</label>*@
+                                <input
+                                    name="postCode"
+                                    type="text"
+                                    class="form-control"
+                                    id="inputZip"
+                                    placeholder="Zip"
+                                    value="@form("postCode").value">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                @helper.CSRF.formField
+                                <button type="submit" class="btn btn-primary align-right">Register</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    }
+    </body>
+}
