@@ -84,7 +84,7 @@
             <form action="/cart" method="POST">
                 @helper.CSRF.formField
                 <script
-                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                src="https://checkout.stripe.com/checkout.js" class="stripe-button btn-block"
                 data-key="pk_test_JbbzL8C2neTGurk8zcrRYYz7"
                 data-amount="@(total*100.0)"
                 data-name="Jitensha"
