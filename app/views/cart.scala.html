@@ -1,8 +1,8 @@
 @import com.stripe.model.Charge
 @(productList: List[Product], charge: Charge, total:Double)
 @main("JITENSHA") {
-    
-    @if(!productList.isEmpty) {
+
+    @if(productList != null && !productList.isEmpty) {
     <div class="row mt-5">
         <div class="col-md-4 offset-4">
             <div class="card">
