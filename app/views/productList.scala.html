@@ -109,7 +109,11 @@
                             <p class="card-text">@product.getColor @product.getManufacturer @product.getMaterial</p>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <button class="btn btn-primary" onclick="@routes.ShopController.addToCart(product.getId)">Add to cart</button>
+                                    <form name="addToCart">
+                                        @helper.CSRF.formField
+                                    <input type="hidden" name="id" value="@product.getId()" />
+                                    <input type="submit" class="btn btn-primary" value="Add To Cart"/>
+                                    </form>
                                 </div>
                                 <div class="col-md-6">
                                     <blockquote class="blockquote text-right mt-2">
