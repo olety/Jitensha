@@ -12,6 +12,6 @@ $(document).ready(function() {
 //                            $("#boxContentId").html(msg);
 //                        }
         });
-        // document.getElementById("cart-table").deleteRow(index + 1);
+        $("#cart-table").deleteRow(index + 1);
     });
 });

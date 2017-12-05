@@ -58,7 +58,7 @@
                             <tr>
                                 <td>@index</td>
                                 <td>@prod.getName</td>
-                                <td>@prod.getPrice</td>
+                                <td>@{f"${prod.getPrice}%1.2f"} $</td>
                                 <td>
                                     <form name="removeFromCart">
                                         @helper.CSRF.formField
@@ -68,6 +68,11 @@
                                 </td>
                             </tr>
                         }
+                        <tr>
+                            <td></td>
+                            <td><b>Total:</b></td>
+                            <td><b>@{f"${total}%1.2f"} $</b></td>
+                        </tr>
                     }
                     </tbody>
                 </table>
