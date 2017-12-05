@@ -39,7 +39,7 @@ public class ProductListController {
         );
     }
 
-    public Result getPruductsListBySearch(String search) {
+    public Result getProductsListBySearch(String search) {
 
         List<Product> plist= Product.findByPartName(search);
         Logger.info("plist {}", plist);
