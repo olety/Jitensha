@@ -41,6 +41,7 @@
             </form>
         </div>
     </nav>
+    @if(!productList.isEmpty) {
     <div class="row mt-5">
         <div class="col-md-4 offset-4">
             <div class="card">
@@ -79,25 +80,36 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-4 offset-4">
-            <form action="/cart" method="POST">
-                @helper.CSRF.formField
-                <script
-                src="https://checkout.stripe.com/checkout.js" class="stripe-button btn-block"
-                data-key="pk_test_JbbzL8C2neTGurk8zcrRYYz7"
-                data-amount="@(total*100.0)"
-                data-name="Jitensha"
-                data-description="Widget"
-                data-image="https://i.imgur.com/jEIiWzZ.png"
-                data-locale="auto"
-                data-billing-address="true"
-                data-shipping-address="true">
-                </script>
-                <input type="hidden" name="amount" value="@(total*100.0)" />
-            </form>
+
+        <div class="row">
+            <div class="col-md-4 offset-4">
+                <form action="/cart" method="POST">
+                    @helper.CSRF.formField
+                    <script
+                    src="https://checkout.stripe.com/checkout.js" class="stripe-button btn-block"
+                    data-key="pk_test_JbbzL8C2neTGurk8zcrRYYz7"
+                    data-amount="@(total*100.0)"
+                    data-name="Jitensha"
+                    data-description="Widget"
+                    data-image="https://i.imgur.com/jEIiWzZ.png"
+                    data-locale="auto"
+                    data-billing-address="true"
+                    data-shipping-address="true">
+                    </script>
+                    <input type="hidden" name="amount" value="@(total*100.0)" />
+                </form>
+            </div>
         </div>
-    </div>
+    } else {
+        <div class="row">
+            <div class="col-md-6 offset-3">
+                <div class="alert alert-warning" role="alert">
+                    <strong>Your cart is empty!</strong> Go ahead and buy something!
+                </div>
+            </div>
+        </div>
+    }
+
 
 
 }
